@@ -130,3 +130,29 @@
 .blog-preview li:last-child {
   border-bottom: none;
 }
+
+
+/* ---- IMAGE ALIGNMENT ---- */
+
+/* Centré */
+.img-center {
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* Droite */
+.img-right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+/* Gauche */
+.img-left {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+}
+
+/* Nettoyage du float après image gauche/droite */
+.img-clear {
+  clear: both;
+}
