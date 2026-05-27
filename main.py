@@ -18,10 +18,7 @@ def get_md_metadata(filepath):
     return {}
 
 def get_ipynb_metadata(filepath):
-    """
-    Lit le front matter dans la première cellule contenant des tirets.
-    Capable de lire le YAML même s'il est caché dans une balise HTML.
-    """
+    """Lit le front matter dans la première cellule contenant des tirets."""
     try:
         nb = nbformat.read(filepath, as_version=4)
         for cell in nb.cells:
@@ -61,12 +58,10 @@ def get_items(docs_dir, subfolder):
             meta = get_md_metadata(filepath)
             meta["_file"] = filename.replace(".md", "")
             meta["_notebook"] = False
-
         elif filename.endswith(".ipynb"):
             meta = get_ipynb_metadata(filepath)
             meta["_file"] = filename.replace(".ipynb", "")
             meta["_notebook"] = True
-
         else:
             continue
 
@@ -81,28 +76,24 @@ def define_env(env):
 
     @env.macro
     def render_projects():
-        """Génère les cartes pour les projets terrain"""
         items = get_items(docs_dir, os.path.join("realisations", "projects"))
         return _render_cards(items, "projects")
 
     @env.macro
     def render_apps():
-        """Génère les cartes pour les apps & scripts"""
         items = get_items(docs_dir, os.path.join("realisations", "apps"))
         return _render_cards(items, "apps")
 
 def _render_cards(items, section):
-    """Génère la grille de cartes au format MkDocs Material."""
+    """Génère la grille de cartes au format propre."""
     if not items:
         return "<p><em>Aucun élément pour l'instant.</em></p>"
 
-    # Badge de type selon la section
     if section == "projects":
         type_badge = '<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:12px;background:#e6f1fb;color:#185fa5">🗺️ Projet terrain</span>'
     else:
         type_badge = '<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:12px;background:#d4edda;color:#155724">🐍 App & Script</span>'
 
-    # Couleurs statut
     status_colors = {
         "terminé":  ("#d4edda", "#155724", "✓ Terminé"),
         "en cours": ("#fff3cd", "#856404", "⟳ En cours"),
@@ -110,62 +101,45 @@ def _render_cards(items, section):
     }
 
     cards = []
-
     for item in items:
-        title       = item.get("title", "")
+        title = item.get("title", "")
         description = item.get("description", "")
-        tags        = item.get("tags", [])
-        status      = item.get("status", "")
-        image       = item.get("image", "") or ""
-        file_slug   = item.get("_file", "")
-        notebook    = item.get("_notebook", False)
+        tags = item.get("tags", [])
+        status = item.get("status", "")
+        image = item.get("image", "") or ""
+        file_slug = item.get("_file", "")
+        notebook = item.get("_notebook", False)
 
-        # --- Image ---
+        # Images
         if image:
-            img_line = f"![{title}]({image})"
+            img_html = f'<img src="{image}" alt="{title}" style="width:100%; height:180px; object-fit:cover; border-radius:4px; margin-bottom:0.75rem;">'
         elif notebook:
-            img_line = "![](../../assets/images/placeholder-notebook.png)"
+            img_html = '<img src="../../assets/images/placeholder-notebook.png" alt="Notebook" style="width:100%; height:180px; object-fit:cover; border-radius:4px; margin-bottom:0.75rem;">'
         else:
-            img_line = "![](../../assets/images/placeholder-project.png)"
+            img_html = '<img src="../../assets/images/placeholder-project.png" alt="Projet" style="width:100%; height:180px; object-fit:cover; border-radius:4px; margin-bottom:0.75rem;">'
 
-        # --- Badge statut ---
+        # Badges
         sc = status_colors.get(status.lower()) if status else None
-        status_badge = (
-            f'<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;'
-            f'border-radius:12px;background:{sc[0]};color:{sc[1]}">{sc[2]}</span>'
-        ) if sc else ""
-
-        # --- Badge notebook ---
-        notebook_badge = (
-            '<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;'
-            'border-radius:12px;background:#f3e8ff;color:#6b21a8;margin-left:4px">'
-            '📓 Notebook</span>'
-        ) if notebook else ""
-
-        # --- Tous les badges ---
+        status_badge = f'<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:12px;background:{sc[0]};color:{sc[1]}">{sc[2]}</span>' if sc else ""
+        notebook_badge = '<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:12px;background:#f3e8ff;color:#6b21a8;margin-left:4px">📓 Notebook</span>' if notebook else ""
         badges = f"{type_badge} {status_badge}{notebook_badge}"
 
-        # --- Tags ---
-        tags_str = " ".join([f"`{t}`" for t in tags]) if tags else ""
-
-        # --- Bouton — toujours vers la page interne ---
+        tags_str = " ".join([f"<code>{t}</code>" for t in tags]) if tags else ""
         href = f"{section}/{file_slug}/"
-        btn_label = "En savoir plus →"
-
-        card = f"""<div class="project-card" markdown>
-{img_line}
-
-{badges}
-
-**{title}**
-
-{description}
-
-{tags_str}
-
-[{btn_label}]({href}){{ .md-button }}
-</div>"""
-
+        
+        # Structure HTML pure sans "markdown" dans la div
+        card = f"""
+<div class="project-card">
+    {img_html}
+    <div class="card-content">
+        <p style="margin-bottom:0.5rem;">{badges}</p>
+        <strong style="display:block; margin-bottom:0.5rem; font-size:1.1rem;">{title}</strong>
+        <p style="font-size:0.9rem; margin-bottom:0.5rem;">{description}</p>
+        <p style="margin-bottom:1rem;">{tags_str}</p>
+        <a href="{href}" class="md-button">En savoir plus →</a>
+    </div>
+</div>
+"""
         cards.append(card)
 
-    return '<div class="grid" markdown>\n\n' + "\n\n".join(cards) + "\n\n</div>"
+    return '<div class="grid">' + "\n".join(cards) + "</div>"

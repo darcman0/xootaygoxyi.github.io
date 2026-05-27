@@ -6,17 +6,15 @@ title: "Xootay Gox Yi | Géomatique, Cartographie & Photogrammétrie"
 description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée à la géomatique : interventions drone, cartographie et analyse spatiale."
 ---
 
-## Xootay Gox Yi
+# Xootay Gox Yi : L'art de lire les territoires
 
-**_Xootay_**, en wolof, désigne la profondeur. Parce qu'un territoire mérite bien plus qu'un simple regard superficiel : il se lit à travers ses sols, ses eaux et ses limites invisibles. 
+**_Xootay_**, en wolof, c'est la profondeur. **_Gox yi_**, ce sont les territoires. 
 
-**_Gox yi_**, ce sont les territoires. Ces espaces physiques que l'on arpente sur le terrain, que l'on survole par drone et que l'on mesure avec précision.
+L'expression Xootay Gox Yi signifie littéralement la profondeur des territoires. Bien plus qu'un intitulé, elle incarne ma vision de la géomatique. Pour moi, cartographier ne se limite jamais à délimiter une étendue physique ; c'est une démarche qui consiste à révéler la complexité d'un espace pour comprendre ce que la carte officielle ne montre pas encore.
 
-Un territoire ne se réduit jamais à ses simples coordonnées géographiques. Il y a ce que la carte officielle affiche, et tout ce qu'elle ne dit pas encore. La texture d'un sol captée par photogrammétrie, le réseau hydrologique qui chemine sous une forêt de mangrove, ou la parcelle agricole qui attend d'être intégrée au cadastre.
+Ce nom définit une posture : ne jamais se satisfaire de la surface. Un territoire n'est pas qu'une simple étendue à cartographier. C'est un assemblage de couches superposées où chaque donnée, qu'elle soit captée par drone, traitée par script ou observée sur le terrain, révèle une histoire unique.
 
-Ce site constitue un espace de documentation et d'analyse technique : vous y trouverez des protocoles détaillés, des outils d'automatisation, des erreurs décortiquées et nos apprentissages continus. Ce que nous faisons, comment nous le faisons, et pourquoi cela compte. Ici, au Sénégal, et plus largement en Afrique de l'Ouest.
-
-La science et la gestion territoriale étant des démarches fondamentalement collectives, cette plateforme dépasse la simple vitrine personnelle. Vous y découvrirez des projets menés en équipe, ainsi que des articles corédigés, reflétant toute la richesse des échanges interdisciplinaires qui nourrissent notre pratique de la géomatique.
+Ce site est le reflet de cette quête. Il constitue mon laboratoire personnel où s'entremêlent la rigueur de l'analyse spatiale et l'intuition du terrain. Que ce soit pour modéliser les mangroves du Sine Saloum ou pour automatiser des workflows SIG, mon objectif demeure constant : transformer la donnée brute en une connaissance actionnable, transparente et partagée.
 
 ---
 ## Ce que vous trouverez ici
@@ -56,10 +54,13 @@ La science et la gestion territoriale étant des démarches fondamentalement col
 <div class="about-section" markdown>
 <div class="about-text" markdown>
 
-**Abdou Aziz Darc** — géographe, technicien supérieur en géomatique et télépilote, basé à Diamniadio, Dakar.
+**Abdou Aziz Darc** | Géomaticien & Géographe
 
-Mon quotidien se partage entre les vols de drones, la production cartographique, l'analyse spatiale et le développement de scripts d'automatisation. 
-Qu'il s'agisse de manipuler QGIS, Python, Agisoft Metashape ou Google Earth Engine, la démarche reste la même : **explorer et apprendre en continu**. L'objectif de cet espace n'est pas de poser en expert absolu, mais de partager humblement mes retours d'expérience et mes apprentissages de terrain.
+Mon travail se situe à l'intersection du réel et du virtuel. Géographe de formation et télépilote par passion, je passe mes journées à traduire la complexité des territoires en modèles numériques précis.
+
+Je ne suis pas simplement un technicien qui exécute ; je suis un concepteur de solutions géospatiales. Mon quotidien consiste à jongler entre les défis logistiques des missions drones (qu’il s’agisse de mangroves isolées ou de projets d’infrastructures) et l’agilité du développement logiciel (FastAPI, Python, scripts d'automatisation).
+
+**Pourquoi ce site ?** Parce que la connaissance est stérile si elle reste isolée. Cet espace est une main tendue vers ceux qui, comme moi, cherchent à élever le niveau de leurs analyses, tout en restant ancrés dans la réalité du terrain.
 
 </div>
 <div class="about-image">

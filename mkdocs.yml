@@ -39,9 +39,15 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - content.code.copy
+    
 
 extra_css:
   - assets/css/extra.css
+  - https://unpkg.com/aos@2.3.1/dist/aos.css
+
+extra_javascript:
+  - https://unpkg.com/aos@2.3.1/dist/aos.js
+  - assets/js/custom.js
 
 markdown_extensions:
   - md_in_html
