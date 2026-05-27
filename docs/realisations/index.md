@@ -8,9 +8,9 @@ description: "Découvrez mes projets SIG et applications géospatiaux : cartogra
 
 # Réalisations
 
-
-Entre les relevés de terrain et les heures de traitement, on produit énormément de données : du code Python, des orthophotomosaïques, des bases de données spatiales. J'ai choisi de regrouper une partie de ces travaux ici. Pour chaque projet, vous trouverez la méthode, les outils et les résultats réels, l'objectif étant de partager une ressource technique directement exploitable.
 <!--
+Entre les relevés de terrain et les heures de traitement, on produit énormément de données : du code Python, des orthophotomosaïques, des bases de données spatiales. J'ai choisi de regrouper une partie de ces travaux ici. Pour chaque projet, vous trouverez la méthode, les outils et les résultats réels, l'objectif étant de partager une ressource technique directement exploitable.
+
 ---
 
 ## Projets 
