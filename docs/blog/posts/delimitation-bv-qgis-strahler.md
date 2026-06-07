@@ -1,6 +1,6 @@
 ---
 date:
-  created: 2025-05-30
+  created: 2026-06-07
 authors:
   - darc
 categories:
