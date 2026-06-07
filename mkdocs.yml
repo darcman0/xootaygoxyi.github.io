@@ -109,6 +109,9 @@ hooks:
 nav:
   - Accueil: index.md
 
+  - Blog:
+    - blog/index.md
+
   - Réalisations:
     - "Mes réalisations": realisations/index.md
     # Ajouter ici les projets .md et .ipynb 
@@ -127,9 +130,6 @@ nav:
 
   - Publications: publications.md
 
-  - Blog:
-    - blog/index.md
-
   - Contact: contact.md
 
 extra:
@@ -137,13 +137,13 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/darcman0
-      name: GitHub — darcman0
+      name: GitHub - darcman0
     - icon: fontawesome/brands/gitlab
       link: https://gitlab.com/darcman0
-      name: GitLab — darcman0
+      name: GitLab - darcman0
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/abdou-aziz-darc-678478169/
-      name: LinkedIn — Abdou Aziz Darc
+      name: LinkedIn - Abdou Aziz Darc
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UCpCPomvreB7IL20DtQ7-F8Q
       name: YouTube
@@ -151,4 +151,4 @@ extra:
       link: /feed_rss_created.xml
       name: Flux RSS
 
-copyright: "Copyright &copy; 2026 Abdou Aziz Darc — Xootay Gox Yi"
+copyright: "Copyright &copy; 2026 Abdou Aziz Darc - Xootay Gox Yi"
