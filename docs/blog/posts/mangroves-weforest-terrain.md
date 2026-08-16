@@ -1,17 +1,22 @@
 ---
 date: 
   created: 2025-04-10
+  updated: 2026-08-16
+
 authors:
   - darc
 categories:
   - Terrain
+  - Drone
 
-description: Retour d'expérience sur la cartographie de 2000 hectares de reboisements de mangrove pour WeForest dans le Sine-Saloum et la Casamance. 
+description: Retour d'expérience sur la cartographie d'environ 7000 hectares de reboisements de mangrove pour WeForest dans le Sine-Saloum et la Casamance. 
 ---
 
-# Cartographier 2 000 ha de mangroves pour WeForest : retour de terrain
+# Cartographier près de 3 000 ha de mangroves pour WeForest : retour de terrain
 
-Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne de 2 000 hectares de reboisements de mangrove dans les îles du Sine-Saloum et en Casamance pour le compte de WeForest, via Earth Géomatique. 300 sites, plusieurs types de drones, des conditions de terrain extrêmes. Voici ce que j'en retiens.
+Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne d'environ 7 000 hectares de reboisements de mangrove dans les îles du Sine-Saloum et en Casamance pour le compte de WeForest, via Earth Géomatique. 750 sites, plusieurs types de drones, des conditions de terrain extrêmes. Voici ce que j'en retiens.
+
+![Vue aérienne d'un site de mangrove pris par drone](https://assets.xootaygoxyi.com/assets/blog/mangroves_we_forest_terrain/DJI_20250711100605_0001_V.JPG){ .img-center }
 
 
 
@@ -23,10 +28,11 @@ Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne
 
 |Dénomination | Description| 
 |------|------|
-| Surface totale | 2 000 ha |
-| Nombre de sites | 300 |
+| Surface totale | ~7 000 ha |
+| Nombre de sites | 750 |
 | Résolution orthophoto | 2 cm |
 | Drones utilisés | DJI Air 2s, Mavic 3 Entreprise, Mavic 3 Mini Pro |
+| Planification de vol | Mission Planner |
 | Outil de suivi terrain | QField |
 | Logiciel de traitement | Agisoft Metashape Professional |
 | Gain de temps traitement | −20% grâce à l'automatisation |
@@ -37,22 +43,28 @@ Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne
 
 ### Accessibilité des sites
 
-Le Sine-Saloum est un archipel de bolongs, de chenaux et de mangroves denses. Certains sites ne sont accessibles qu'en pirogue, avec du matériel drone à protéger de l'humidité et des éclaboussures.
+Le Sine-Saloum est un archipel de bolongs, de chenaux et de mangroves denses. Certains sites ne sont accessibles qu'en pirogue, avec du matériel drone à protéger de l'humidité et des éclaboussures. À cela s'ajoutait une contrainte propre à l'objet cartographié : sur l'ensemble des 750 sites (300 environs été localisé dans le Sine-Saloum), les jeunes pousses de mangrove devaient être visibles et non recouvertes d'eau au moment du vol, ce qui imposait de ne travailler qu'en marée basse.
 
-**Solution :** Housses étanches pour les batteries et les télécommandes. Vols planifiés au plus tôt le matin pour éviter les vents de mer de l'après-midi.
+**Solution :** Sacs de protection pour les batteries et les télécommandes, certains étanches et d'autres non, mais les batteries étaient systématiquement mises en sécurité dans ces sacs. Chaque mission était calée sur les horaires de marée basse du site, avec en plus une contrainte de lumière : on cherchait à toujours voler en présence de soleil, donc on débutait très tôt et on terminait bien avant le coucher du soleil, le tout en restant dans la fenêtre de marée basse disponible.
 
 
 ### Couverture nuageuse
 
-En saison des pluies, la couverture nuageuse peut invalider des orthophotos entières — les ombres créent des discontinuités radiométriques inutilisables pour la détection de changement.
+En saison des pluies, la couverture nuageuse peut invalider des orthophotos entières, car les ombres créent des discontinuités radiométriques inutilisables pour la détection de changement.
 
-**Solution :** Planification des vols par fenêtres météo (application Windy + observation locale). Re-vol systématique des zones affectées le jour suivant.
+**Solution :** Planification des vols par fenêtres météo (application Nautide + observation locale). 
 
 ### Autonomie batterie sur zones étendues
 
-Un site de 10–15 ha nécessite 2 à 3 batteries consécutives. La gestion des rotations de batteries en terrain isolé, sans accès à l'électricité, est un défi logistique réel.
+Un site de 10–15 ha nécessite 2 à 3 batteries consécutives. La gestion des rotations de batteries en terrain isolé, sans accès à l'électricité, est un défi logistique réel, d'autant plus qu'on était 3 télépilotes à faire tourner du matériel en parallèle.
 
-**Solution :** Panneau solaire portable 100W + banque d'énergie 40 000 mAh pour recharge partielle en journée. Chargeur voiture branché sur le moteur de la pirogue.
+**Solution :** Chaque télépilote disposait de près de 8 batteries, ce qui donnait de la marge pendant la journée. Le groupe électrogène permettait de recharger la moitié des batteries sur place, en complément des powerbanks de 20 000 mAh pour les téléphones et les radiocommandes.
+
+---
+
+## Planification des vols avec Mission Planner
+
+Les plans de vol ont été préparés avec Mission Planner, en tenant compte des contraintes de marée basse et d'accès en pirogue propres à chaque site : chaque mission ne pouvait se faire que sur la fenêtre de marée basse disponible ce jour-là, avec pour objectif de rester dans les heures de soleil. Chaque mission était ajustée site par site (altitude, recouvrement, orientation des bandes de vol) selon la forme et la densité de la mangrove à couvrir.
 
 ---
 
@@ -60,54 +72,21 @@ Un site de 10–15 ha nécessite 2 à 3 batteries consécutives. La gestion des 
 
 QField a été central dans la gestion de la mission. Voici notre workflow :
 
-1. **Préparation dans QGIS** : création d'une couche de points pour les 300 sites, avec attributs (ID site, surface estimée, statut, date prévue, commentaires)
-2. **Synchronisation sur QField** : chaque télépilote avait sa zone de sites assignée sur sa tablette
+1. **Préparation dans QGIS** : Pour les 300 sites, avec attributs (ID site, surface estimée, statut, date prévue, commentaires)
+2. **Synchronisation sur QField** : chaque télépilote pouvait renseigner les sites qu'il a survoler et voir ce qui on déja été survolée à partir de son téléphone en temps réelle
 3. **Sur le terrain** : remplissage du statut (volé / à re-voler / problème technique), ajout de photos géolocalisées
-4. **Synchronisation en fin de journée** : mise à jour de la base centrale via QFieldCloud
+4. **Chaque soir** : traitement de toutes les images de la journée et export des orthophotos, pour repérer rapidement les sites à re-voler avant de quitter la zone
+5. **Synchronisation en fin de journée** : mise à jour de la base centrale via QFieldCloud
 
 ---
 
 ## Le traitement dans Metashape
 
-Pour gagner du temps sur 300 lots d'images, j'ai mis en place un workflow semi-automatisé avec les scripts Python de Metashape :
+Pour gagner du temps sur 300 lots d'images, j'ai mis en place un traitement par lot (batch process) dans Metashape, configuré comme une chaîne unique appliquée automatiquement à chaque chunk : un premier alignement des photos, un recalage par référence, un second alignement affiné à partir des points-clés conservés, puis la construction du MNT et de l'orthomosaïque, le tout projeté directement en UTM 28N (EPSG:32628).
 
-```python
-import Metashape
-import os
+Deux réglages ont fait une vraie différence sur ce terrain : le filtre anti-fantôme (ghosting filter) sur l'orthomosaïque, pour limiter les artefacts causés par le mouvement des palétuviers sous le vent entre deux prises de vue, et la double passe d'alignement, qui améliore nettement la précision sur les zones à faible texture comme les tanks de mangrove denses.
 
-doc = Metashape.app.document
-chunk = doc.chunk
-
-# Alignement des photos avec paramètres optimisés pour mangrove
-chunk.matchPhotos(
-    accuracy=Metashape.HighAccuracy,
-    generic_preselection=True,
-    reference_preselection=True
-)
-chunk.alignCameras()
-
-# Nuage de points dense
-chunk.buildDepthMaps(quality=Metashape.MediumQuality)
-chunk.buildDenseCloud()
-
-# Orthophoto 2 cm
-chunk.buildOrthomosaic(
-    surface=Metashape.ElevationData,
-    resolution=0.02  # 2 cm
-)
-
-# Export automatique
-output_path = "D:/WeForest/outputs/"
-chunk.exportOrthomosaic(
-    output_path + chunk.label + "_ortho.tif",
-    image_format=Metashape.ImageFormatTIFF,
-    resolution=0.02
-)
-
-print(f"Traitement terminé : {chunk.label}")
-```
-
-Ce script, appliqué via le batch processing de Metashape sur des dossiers organisés par site, a réduit le temps de traitement moyen de **20%** en éliminant les étapes manuelles répétitives.
+Appliqué via le batch processing de Metashape sur des dossiers organisés par site, ce traitement a réduit le temps de traitement moyen de **20%** en éliminant les étapes manuelles répétitives entre chaque lot.
 
 ---
 
@@ -115,14 +94,14 @@ Ce script, appliqué via le batch processing de Metashape sur des dossiers organ
 
 !!! success "Ce qui a bien fonctionné "
     - QField pour le suivi en temps réel des 300 sites : indispensable
-    - Les vols tôt le matin (6h–9h) : lumière rasante, vent faible, mangroves encore humides donc contraste maximal
+    - Caler chaque vol sur la marée basse tout en restant dans la fenêtre de soleil : lumière rasante, mangroves encore humides donc contraste maximal
     - Recouvrement frontal/latéral à 80%/70% : moins de trous dans les zones denses
 
 !!! warning "Ce que je referais différemment "
-    - Prévoir des GCP même sur des zones plates : la précision verticale s'en ressent
+    - Nous n'avons utilisé ni GCP ni RTK sur cette mission : prévoir au moins des GCP même sur des zones plates aurait amélioré la précision verticale
     - Documenter les sites problématiques dès le terrain plutôt qu'en post-traitement
-    - Utiliser systématiquement le Mavic 3 Entreprise (RTK intégré) plutôt que l'Air 2s pour les zones critiques
+    - Utiliser systématiquement le Mavic 3 Entreprise plutôt que l'Air 2s pour les zones critiques : son obturateur mécanique et sa meilleure stabilité face aux vents forts, fréquents sur zone, donnaient des orthophotos de meilleure qualité
 
 ---
 
-*Mission réalisée avec Earth Géomatique pour WeForest, Sénégal, 2025.*  
+*Mission réalisée avec Earth Géomatique pour WeForest, Sénégal, 2025.*

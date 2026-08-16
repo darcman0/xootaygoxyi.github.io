@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="text-align:center; padding: 4rem 1rem 6rem;">
+
+  <p style="font-size: 5rem; font-weight: 700; margin: 0; line-height: 1; color: var(--md-primary-fg-color);">
+    404
+  </p>
+
+  <h1 style="margin-top: 0.5rem; font-weight: 500;">
+    Cette page n'existe pas
+  </h1>
+
+  <p style="max-width: 32rem; margin: 1rem auto 2rem; color: var(--md-default-fg-color--light);">
+    Le lien est peut-être cassé, ou la page a été déplacée. Voici quelques pistes pour retrouver ton chemin.
+  </p>
+
+  <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+    <a href="{{ config.site_url }}" class="md-button md-button">
+      Retour à l'accueil
+    </a>
+    <a href="{{ config.site_url }}blog/" class="md-button">
+      Voir le blog
+    </a>
+    <a href="{{ config.site_url }}realisations/" class="md-button">
+      Réalisations
+    </a>
+  </div>
+
+  <p style="font-size: 0.85rem; color: var(--md-default-fg-color--lighter);">
+    Ou utilise la recherche en haut de la page pour trouver un article précis.
+  </p>
+
+</div>
+{% endblock %}
