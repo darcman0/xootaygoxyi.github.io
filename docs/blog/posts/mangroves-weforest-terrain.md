@@ -12,11 +12,11 @@ categories:
 description: Retour d'expérience sur la cartographie d'environ 7000 hectares de reboisements de mangrove pour WeForest dans le Sine-Saloum et la Casamance. 
 ---
 
-# Cartographier près de 3 000 ha de mangroves pour WeForest : retour de terrain
+# Cartographier près de 7 500 ha de mangroves pour WeForest : retour de terrain
 
 Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne d'environ 7 000 hectares de reboisements de mangrove dans les îles du Sine-Saloum et en Casamance pour le compte de WeForest, via Earth Géomatique. 750 sites, plusieurs types de drones, des conditions de terrain extrêmes. Voici ce que j'en retiens.
 
-![Vue aérienne d'un site de mangrove pris par drone](https://assets.xootaygoxyi.com/assets/blog/mangroves_we_forest_terrain/DJI_20250711100605_0001_V.JPG){ .img-center }
+![Vue aérienne d'un site de mangrove pris par drone](https://assets.xootaygoxyi.com/assets/blog/mangroves_we_forest_terrain/DJI_20250711100605_0001_V.webp){ .img-center }
 
 
 
