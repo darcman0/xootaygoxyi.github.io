@@ -84,7 +84,7 @@ QField a été central dans la gestion de la mission. Voici notre workflow :
 
 Pour gagner du temps sur 300 lots d'images, j'ai mis en place un traitement par lot (batch process) dans Metashape, configuré comme une chaîne unique appliquée automatiquement à chaque chunk : un premier alignement des photos, un recalage par référence, un second alignement affiné à partir des points-clés conservés, puis la construction du MNT et de l'orthomosaïque, le tout projeté directement en UTM 28N (EPSG:32628).
 
-Deux réglages ont fait une vraie différence sur ce terrain : le filtre anti-fantôme (ghosting filter) sur l'orthomosaïque, pour limiter les artefacts causés par le mouvement des palétuviers sous le vent entre deux prises de vue, et la double passe d'alignement, qui améliore nettement la précision sur les zones à faible texture comme les tanks de mangrove denses.
+Deux réglages ont fait une vraie différence sur ce terrain : le filtre anti-fantôme (ghosting filter) sur l'orthomosaïque, pour limiter les artefacts causés par le mouvement des palétuviers sous le vent entre deux prises de vue, et la double passe d'alignement, qui améliore nettement la précision sur les zones à faible texture comme les tannes de mangrove denses.
 
 Appliqué via le batch processing de Metashape sur des dossiers organisés par site, ce traitement a réduit le temps de traitement moyen de **20%** en éliminant les étapes manuelles répétitives entre chaque lot.
 
