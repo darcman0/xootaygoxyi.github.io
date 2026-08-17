@@ -8,9 +8,7 @@ description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée
 
 # Xootay Gox Yi : L'art de lire les territoires
  
-**_Xootay_** (profondeur) et **_gox yi_** (les territoires), en wolof. Cartographier ne se limite jamais à délimiter une étendue : c'est révéler ce qu'une carte officielle ne montre pas encore, que la donnée vienne d'un drone, d'un script ou du terrain.
- 
-Ce site est mon laboratoire personnel, entre rigueur de l'analyse spatiale et intuition du terrain.
+### **_Xootay_** (profondeur) et **_gox yi_** (les territoires), en wolof. Cartographier ne se limite jamais à délimiter une étendue : c'est révéler ce qu'une carte officielle ne montre pas encore, que la donnée vienne d'un drone, d'un script ou du terrain. Ce site est mon laboratoire personnel, entre rigueur de l'analyse spatiale et intuition du terrain.
 
 
 ---

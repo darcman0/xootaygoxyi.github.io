@@ -5,9 +5,7 @@ description: "Découvrez mes articles techniques et retours d'expérience : prot
 
 # Blog
 
-Bienvenue sur l'espace d'analyse et de partage de **Xootay Gox Yi**. Cet espace est dédié aux retours d'expérience, aux protocoles de traitement de données et aux réflexions sur la géomatique.
-
-La science étant une démarche collective, cet espace n'a pas vocation à être une vitrine personnelle exclusive. Vous y découvrirez également des articles rédigés en collaboration, reflétant la diversité et la richesse des échanges techniques qui nourrissent ma pratique.
+### Bienvenue sur l'espace d'analyse et de partage de **Xootay Gox Yi**. Cet espace est dédié aux retours d'expérience, aux protocoles de traitement de données et aux réflexions sur la géomatique. La science étant une démarche collective, cet espace n'a pas vocation à être une vitrine personnelle exclusive. Vous y découvrirez également des articles rédigés en collaboration, reflétant la diversité et la richesse des échanges techniques qui nourrissent ma pratique.
 
 ---
 <div class="followit-wrapper">
