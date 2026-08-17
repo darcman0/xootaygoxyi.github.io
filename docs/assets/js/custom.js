@@ -155,14 +155,14 @@ document$.subscribe(function () {
     if (!canvas) return;
 
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 18000;
+    let numberOfParticles = (canvas.height * canvas.width) / 14000;
 
     // Moins de particules sur mobile.
     if (window.innerWidth < 600) {
-      numberOfParticles *= 0.5;
+      numberOfParticles *= 0.65;
     }
-    if (numberOfParticles > 70) {
-      numberOfParticles = 70;
+    if (numberOfParticles > 90) {
+      numberOfParticles = 90;
     }
 
     for (let i = 0; i < numberOfParticles; i += 1) {
@@ -205,10 +205,10 @@ document$.subscribe(function () {
     const isDarkMode = document.body.getAttribute('data-md-color-scheme') === 'slate';
     const pointColor = isDarkMode
       ? 'rgba(255, 255, 255, 0.10)'
-      : 'rgba(0, 0, 0, 0.07)';
+      : 'rgba(0, 0, 0, 0.14)';
     const lineColor = isDarkMode
       ? 'rgba(255, 255, 255, 0.035)'
-      : 'rgba(0, 0, 0, 0.035)';
+      : 'rgba(0, 0, 0, 0.07)';
 
     for (let i = 0; i < particlesArray.length; i += 1) {
       particlesArray[i].update(pointColor);
