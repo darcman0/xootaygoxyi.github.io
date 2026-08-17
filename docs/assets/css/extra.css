@@ -1,8 +1,24 @@
 /* ============================================================
    XOOTAY GOX YI — extra.css
-   Style Global 100% origine (Header non modifié)
+
    ============================================================ */
 
+
+/* 1. Justifier les textes et listes de tes articles et pages standard */
+.md-typeset p, 
+.md-typeset li,
+.md-typeset h3 {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* 2. Forcer le centrage absolu pour tous les éléments textuels situés 
+   à l'intérieur d'un bloc div centré (comme ta page "En construction") */
+.md-typeset div[style*="center"] p,
+.md-typeset div[style*="center"] h3,
+.md-typeset div[style*="center"] span {
+  text-align: center !important;
+}
 /* --- ARRIÈRE-PLAN GÉOMÉTRIQUE (Couche isolée) --- */
 #xgy-particles {
   position: fixed; 
@@ -98,6 +114,9 @@
 .md-typeset .grid.cards > ul > li {
   transition: border-color 0.25s ease, transform 0.2s ease;
 }
+
+
+
 .md-typeset .grid.cards > ul > li:hover {
   border-color: var(--md-primary-fg-color--light) !important;
   transform: translateY(-2px);
@@ -173,4 +192,31 @@
   margin: 0 auto;
   padding: 0.7rem 2rem;
   font-size: 1rem;
+}
+
+
+/* --- CENTRAGE DES BOUTONS DANS LES CARTES (GRID CARDS) --- */
+.md-typeset .grid.cards > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Force le centrage du paragraphe contenant le bouton et le pousse tout en bas de la carte */
+.md-typeset .grid.cards > ul > li > p:last-child {
+  text-align: center !important;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* Assure l'affichage en bloc en ligne centré du bouton */
+.md-typeset .grid.cards > ul > li .md-button {
+  display: inline-block !important;
+  margin-top: 1rem;
+}
+
+/* Centrer automatiquement un bouton isolé à la fin d'une page */
+.md-typeset > p > a.md-button {
+  display: table;
+  margin: 2rem auto;
 }
