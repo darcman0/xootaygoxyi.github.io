@@ -30,7 +30,11 @@ Une mission, une collaboration, une question sur ce que vous avez trouvé ici. J
 
 Si tu préfères passer par le formulaire ci-dessous, je reçois la notification et je te réponds dès que possible.
 
-<form action="https://formspree.io/f/xrpzypgg" method="POST" class="contact-form">
+<form action="https://formspree.io/f/xrpzypgg" method="POST" class="contact-form" id="contactForm">
+  
+  <!-- Piège à spam (Honeypot invisible) -->
+  <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+
   <div class="form-row">
     <div class="form-group">
       <label for="prenom">Prénom</label>
@@ -44,6 +48,7 @@ Si tu préfères passer par le formulaire ci-dessous, je reçois la notification
   <div class="form-group">
     <label for="email">Email</label>
     <input type="email" name="email" id="email" required placeholder="ton@email.com">
+    <small id="email-error" style="color: #e53935; display: none; margin-top: 0.3rem; font-size: 0.85rem;">Veuillez entrer une adresse email valide (ex: nom@domaine.com).</small>
   </div>
   <div class="form-group">
     <label for="message">Message</label>
@@ -51,3 +56,22 @@ Si tu préfères passer par le formulaire ci-dessous, je reçois la notification
   </div>
   <button type="submit" class="md-button md-button">Envoyer</button>
 </form>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('email-error');
+  
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(emailInput.value.trim())) {
+    e.preventDefault();
+    emailError.style.display = 'block';
+    emailInput.style.borderColor = '#e53935';
+    emailInput.focus();
+  } else {
+    emailError.style.display = 'none';
+    emailInput.style.borderColor = '';
+  }
+});
+</script>
