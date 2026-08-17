@@ -7,14 +7,11 @@ description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée
 ---
 
 # Xootay Gox Yi : L'art de lire les territoires
+ 
+**_Xootay_** (profondeur) et **_gox yi_** (les territoires), en wolof. Cartographier ne se limite jamais à délimiter une étendue : c'est révéler ce qu'une carte officielle ne montre pas encore, que la donnée vienne d'un drone, d'un script ou du terrain.
+ 
+Ce site est mon laboratoire personnel, entre rigueur de l'analyse spatiale et intuition du terrain.
 
-**_Xootay_**, en wolof, c'est la profondeur. **_Gox yi_**, ce sont les territoires. 
-
-L'expression Xootay Gox Yi signifie littéralement la profondeur des territoires. Bien plus qu'un intitulé, elle incarne ma vision de la géomatique. Pour moi, cartographier ne se limite jamais à délimiter une étendue physique : c'est une démarche qui consiste à révéler la complexité d'un espace pour comprendre ce que la carte officielle ne montre pas encore.
-
-Ce nom définit une posture : ne jamais se satisfaire de la surface. Un territoire n'est pas qu'une simple étendue à cartographier. C'est un assemblage de couches superposées où chaque donnée, qu'elle soit captée par drone, traitée par script ou observée sur le terrain, révèle une histoire unique.
-
-Ce site est le reflet de cette quête. Il constitue mon laboratoire personnel où s'entremêlent la rigueur de l'analyse spatiale et l'intuition du terrain. Que ce soit pour modéliser les mangroves du Sine Saloum ou pour automatiser des workflows SIG, mon objectif demeure constant : transformer la donnée brute en une connaissance actionnable, transparente et partagée.
 
 ---
 ## Ce que vous trouverez ici
@@ -25,7 +22,7 @@ Ce site est le reflet de cette quête. Il constitue mon laboratoire personnel o�
 
     ---
 
-    Projets terrain, scripts géospatiaux, outils d'automatisation et applications. Du drone sur le terrain au code sur le serveur.
+    Projets terrain, scripts géospatiaux, outils d'automatisation et applications. 
 
     [Voir les réalisations :material-arrow-right:](realisations/index.md){ .md-button }
 
@@ -41,7 +38,7 @@ Ce site est le reflet de cette quête. Il constitue mon laboratoire personnel o�
 
     ---
 
-    Mémoires académiques, rapports de recherche et productions écrites : des travaux sur l'hydrologie, la géomatique et l'environnement au Sénégal.
+    Mémoires académiques, rapports de recherche et productions écrites.
 
     [Voir les publications :material-arrow-right:](publications.md){ .md-button }
 
@@ -56,9 +53,8 @@ Ce site est le reflet de cette quête. Il constitue mon laboratoire personnel o�
 
 **Abdou Aziz Darc** (Géomaticien & Géographe)
 
-Mon travail se situe à l'intersection du réel et du virtuel. Géographe de formation et télépilote par passion, je passe mes journées à traduire la complexité des territoires en modèles numériques précis.
+Géographe de formation et télépilote par passion, je traduis la complexité des territoires en modèles numériques précis, entre missions drone et développement logiciel (Python, FastAPI).
 
-Je ne suis pas simplement un technicien qui exécute. Je suis un concepteur de solutions géospatiales. Mon quotidien consiste à jongler entre les défis logistiques des missions drones (qu’il s’agisse de mangroves isolées ou de projets d’infrastructures) et l’agilité du développement logiciel (FastAPI, Python, scripts d'automatisation).
 
 **Pourquoi ce site ?** Parce que la connaissance est stérile si elle reste isolée. Cet espace est une main tendue vers ceux qui, comme moi, cherchent à élever le niveau de leurs analyses, tout en restant ancrés dans la réalité du terrain.
 
@@ -80,11 +76,11 @@ Je ne suis pas simplement un technicien qui exécute. Je suis un concepteur de s
 
 -   :material-satellite-variant: **Télédétection**
 
-    ENVI · Google Earth Engine · ERDAS · Classifications · NDVI/NDRE
+    ENVI · Google Earth Engine · ERDAS · SNAP 
 
 -   :material-code-braces: **Programmation**
 
-    Python · GeoPandas · Rasterio · R · HTML/CSS
+    Python · R · HTML/CSS
 
 </div>
 
