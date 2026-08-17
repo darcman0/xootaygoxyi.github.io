@@ -104,16 +104,11 @@
   box-shadow: none !important;
 }
 
-
-/* Formulaire de contact */
+/* Formulaire de contact - Mobile first */
 .contact-form {
   max-width: 600px;
-  margin: 1.5rem auto 0;
-}
-
-.contact-form button[type="submit"] {
-  display: block;
-  margin: 0 auto;
+  margin: 2rem auto 0;
+  padding: 0 0.5rem;
 }
 
 .form-row {
@@ -122,8 +117,16 @@
   gap: 1rem;
 }
 
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  width: 100%;
 }
 
 .contact-form label {
@@ -134,16 +137,21 @@
   color: var(--md-default-fg-color);
 }
 
-.contact-form input,
+/* Forcer la largeur pleine et le style sur tous les inputs du formulaire */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
 .contact-form textarea {
-  width: 100%;
-  padding: 0.6rem 0.8rem;
+  width: 100% !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem;
   border: 1px solid var(--md-default-fg-color--lighter);
   border-radius: 0.2rem;
   background: var(--md-default-bg-color);
   color: var(--md-default-fg-color);
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.4;
   transition: border-color 0.2s;
 }
 
@@ -151,17 +159,18 @@
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--md-primary-fg-color);
+  box-shadow: 0 0 0 2px var(--md-primary-fg-color--transparent, rgba(0,0,0,0.05));
 }
 
 .contact-form textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
 }
 
-/* Responsive : empile sur mobile */
-@media (max-width: 480px) {
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
+/* Centrer le bouton */
+.contact-form button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
 }
