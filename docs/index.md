@@ -8,7 +8,7 @@ description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée
 
 # Xootay Gox Yi : L'art de lire les territoires
  
-### **_Xootay_** (profondeur) et **_gox yi_** (les territoires), en wolof. Cartographier ne se limite jamais à délimiter une étendue : c'est révéler ce qu'une carte officielle ne montre pas encore, que la donnée vienne d'un drone, d'un script ou du terrain. Ce site est mon laboratoire personnel, entre rigueur de l'analyse spatiale et intuition du terrain.
+### **_Xootay_** (profondeur) et **_gox yi_** (les territoires), en wolof. Cartographier ne se limite jamais à délimiter une étendue : c'est révéler ce qu'une carte officielle ne montre pas encore, peu importe comment la donnée a été obtenue. Ce site est mon laboratoire personnel, entre rigueur de l'analyse spatiale et intuition du terrain.
 
 
 ---
@@ -51,10 +51,10 @@ description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée
 
 **Abdou Aziz Darc** (Géomaticien & Géographe)
 
-Géographe de formation et télépilote par passion, je traduis la complexité des territoires en modèles numériques précis, entre missions drone et développement logiciel (Python, FastAPI).
+Géographe de formation et télépilote drone, je traduis la complexité des territoires en modèles numériques précis, entre missions de terrain, analyse spatiale et développement logiciel en Python.
 
 
-**Pourquoi ce site ?** Parce que la connaissance est stérile si elle reste isolée. Cet espace est une main tendue vers ceux qui, comme moi, cherchent à élever le niveau de leurs analyses, tout en restant ancrés dans la réalité du terrain.
+**Pourquoi ce site ?** Parce que la connaissance est stérile si elle reste isolée. Xootay Gox Yi est à la fois un portfolio, un laboratoire personnel et un espace de transmission technique.
 
 </div>
 <div class="about-image">
