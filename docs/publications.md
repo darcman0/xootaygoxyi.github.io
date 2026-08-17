@@ -2,7 +2,7 @@
 hide:
   - toc
   - navigation
-title: "Xootay Gox Yi | Publications & Recherches — Abdou Aziz Darc"
+title: "Xootay Gox Yi | Publications & Recherches - Abdou Aziz Darc"
 description: "Consultez mes mémoires académiques, rapports techniques et travaux de recherche appliqués à l'hydrologie, l'environnement et la géomatique."
 ---
 

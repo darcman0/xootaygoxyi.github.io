@@ -2,7 +2,7 @@
 hide:
   - toc
   - navigation
-title: "Xootay Gox Yi | Contact & Collaborations — Abdou Aziz Darc"
+title: "Xootay Gox Yi | Contact & Collaborations - Abdou Aziz Darc"
 description: "Une mission, un levé drone ou un projet SIG au Sénégal ou ailleurs ? Retrouvez mes canaux de contact professionnels, GitHub, LinkedIn."
 ---
 

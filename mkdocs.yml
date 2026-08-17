@@ -144,6 +144,8 @@ nav:
 
   - Contact: contact.md
 
+  - Mentions légales : legal.md
+
 extra:
   generator: false
   social:
@@ -162,5 +164,8 @@ extra:
     - icon: fontawesome/solid/rss
       link: /feed_rss_created.xml
       name: Flux RSS
+    - icon: fontawesome/solid/shield-halved    
+      link: /legal
+      name: Mentions légales
 
 copyright: "Copyright &copy; 2026 Abdou Aziz Darc - Xootay Gox Yi"
