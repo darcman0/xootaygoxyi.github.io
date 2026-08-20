@@ -71,8 +71,88 @@ def get_items(docs_dir, subfolder):
     items.sort(key=lambda x: str(x.get("date", "") or ""), reverse=True)
     return items
 
+def get_blog_title(filepath):
+    """Récupère le premier titre Markdown d'un article."""
+    with open(filepath, encoding="utf-8") as f:
+        for line in f:
+            if line.startswith("# "):
+                return line[2:].strip()
+    return "Article sans titre"
+
+
+def slugify_blog_title(title):
+    """Produit le slug utilisé par le plugin blog de Material for MkDocs."""
+    import re
+
+    slug = title.lower().strip()
+    slug = re.sub(r"[^\w\s-]", "", slug, flags=re.UNICODE)
+    slug = re.sub(r"[\s_-]+", "-", slug)
+    return slug.strip("-")
+
+
+def get_latest_blog_posts(docs_dir, limit=3):
+    """Retourne les articles du blog triés du plus récent au plus ancien."""
+    posts_dir = os.path.join(docs_dir, "blog", "posts")
+    posts = []
+
+    if not os.path.exists(posts_dir):
+        return posts
+
+    for filename in os.listdir(posts_dir):
+        if not filename.endswith(".md") or filename.startswith("_"):
+            continue
+
+        filepath = os.path.join(posts_dir, filename)
+        meta = get_md_metadata(filepath)
+        date = meta.get("date", {})
+
+        if isinstance(date, dict):
+            date = date.get("created", "")
+
+        if not date:
+            continue
+
+        title = get_blog_title(filepath)
+        posts.append({
+            "title": title,
+            "description": meta.get("description", ""),
+            "categories": meta.get("categories", []),
+            "date": str(date),
+            "url": f"blog/{slugify_blog_title(title)}/",
+        })
+
+    posts.sort(key=lambda post: post["date"], reverse=True)
+    return posts[:limit]
+
+
+def render_latest_blog_posts(posts):
+    """Génère les cartes HTML des derniers articles."""
+    cards = []
+
+    for post in posts:
+        categories = " · ".join(post["categories"])
+        description = post["description"]
+
+        cards.append(f"""
+<div class="latest-post-card">
+    <p class="latest-post-date">{post['date']} · {categories}</p>
+    <h3>{post['title']}</h3>
+    <p>{description}</p>
+    <a href="{post['url']}" class="md-button">Lire l'article →</a>
+</div>
+""")
+
+    return "<div class=\"latest-posts-grid\">" + "".join(cards) + "</div>"
+
+
 def define_env(env):
     docs_dir = env.conf["docs_dir"]
+
+    @env.macro
+    def render_latest_posts(limit=3):
+        posts = get_latest_blog_posts(docs_dir, limit)
+        return render_latest_blog_posts(posts)
+
 
     @env.macro
     def render_projects():
