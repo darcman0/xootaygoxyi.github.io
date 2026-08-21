@@ -27,16 +27,6 @@
   pointer-events: none;
 }
 
-.md-header,
-.md-sidebar,
-.md-overlay {
-  position: relative;
-  z-index: 4;
-}
-
-.md-overlay {
-  z-index: 3;
-}
 
 /* Style global */
 .profile-photo {
