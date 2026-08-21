@@ -53,6 +53,15 @@ Retrouve les derniers tutoriels, retours d'expérience et analyses consacrés à
 [Voir tous les articles :material-arrow-right:](blog/index.md){ .md-button }
 
 ---
+## Articles les plus consultés
+
+Ce classement est actualisé automatiquement chaque semaine à partir des statistiques de fréquentation du site.
+
+{{ render_popular_posts(2) }}
+
+[Voir tous les articles :material-arrow-right:](blog/index.md){ .md-button }
+
+
 ## Qui est derrière ce site
 
 <div class="about-section" markdown>

@@ -1,6 +1,8 @@
 import os
 import yaml
 import nbformat
+import json
+
 
 def get_md_metadata(filepath):
     """Lit le front matter d'un fichier .md de manière souple"""
@@ -161,6 +163,70 @@ def render_latest_blog_posts(posts):
     return "<div class=\"latest-posts-grid\">" + "".join(cards) + "</div>"
 
 
+def get_popular_blog_posts(docs_dir, limit=2):
+    """Lit le classement généré chaque semaine par GoatCounter."""
+    data_file = os.path.join(
+        docs_dir,
+        "assets",
+        "data",
+        "popular-articles.json",
+    )
+
+    if not os.path.exists(data_file):
+        return []
+
+    try:
+        with open(data_file, encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return []
+
+    articles = data.get("articles", [])
+    if not isinstance(articles, list):
+        return []
+
+    return articles[:limit]
+
+
+def render_popular_blog_posts(posts):
+    """Génère les cartes des articles les plus consultés."""
+    if not posts:
+        return "<p><em>Le classement sera disponible après les premières consultations.</em></p>"
+
+    cards = []
+
+    for post in posts:
+        categories = post.get("categories", [])
+        if isinstance(categories, list):
+            categories = " · ".join(str(category) for category in categories)
+        else:
+            categories = str(categories)
+
+        image = post.get("image", "")
+        image_html = ""
+        if image:
+            image_html = f'''<img
+                class="latest-post-image"
+                src="{image}"
+                alt="Illustration de : {post.get('title', 'Article')}"
+                loading="lazy"
+            >'''
+
+        views = post.get("views", 0)
+        cards.append(f"""
+<div class="latest-post-card popular-post-card">
+    {image_html}
+    <div class="latest-post-card-content">
+        <p class="latest-post-date">{categories} · {views} vue(s)</p>
+        <h3>{post.get('title', 'Article sans titre')}</h3>
+        <a href="{post.get('url', '#')}" class="md-button">Lire l'article →</a>
+    </div>
+</div>
+""")
+
+    return '<div class="latest-posts-grid popular-posts-grid">' + "".join(cards) + "</div>"
+
+
 def define_env(env):
     docs_dir = env.conf["docs_dir"]
 
@@ -168,6 +234,12 @@ def define_env(env):
     def render_latest_posts(limit=3):
         posts = get_latest_blog_posts(docs_dir, limit)
         return render_latest_blog_posts(posts)
+    
+    @env.macro
+    def render_popular_posts(limit=2):
+        posts = get_popular_blog_posts(docs_dir, limit)
+        return render_popular_blog_posts(posts)
+
 
 
     @env.macro
