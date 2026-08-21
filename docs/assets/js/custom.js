@@ -256,6 +256,7 @@
       return controller;
     }
   
+    
     function getController() {
       if (!window[STATE_KEY]) {
         window[STATE_KEY] = createController();
