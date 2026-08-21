@@ -8,7 +8,7 @@ description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée
 
 # Xootay Gox Yi : L'art de lire les territoires
  
-### **_Xootay_** (profondeur) et **_gox yi_** (les territoires), en wolof. Cartographier ne se limite jamais à délimiter une étendue : c'est révéler ce qu'une carte officielle ne montre pas encore, peu importe comment la donnée a été obtenue. Ce site est mon laboratoire personnel, entre rigueur de l'analyse spatiale et intuition du terrain.
+### **Xootay Gox Yi** signifie « la profondeur des territoires » en wolof. Ce site rassemble des analyses spatiales, des retours de terrain et des outils géomatiques conçus pour mieux comprendre les territoires et leurs dynamiques.
 
 
 ---
@@ -50,7 +50,7 @@ Retrouve les derniers tutoriels, retours d'expérience et analyses consacrés à
 
 {{ render_latest_posts(3) }}
 
-[Voir tous les articles :material-arrow-right:](blog/index.md){ .md-button }
+
 
 ---
 ## Articles les plus consultés
@@ -59,7 +59,7 @@ Ce classement est actualisé automatiquement chaque semaine à partir des statis
 
 {{ render_popular_posts(2) }}
 
-[Voir tous les articles :material-arrow-right:](blog/index.md){ .md-button }
+
 
 
 ## Qui est derrière ce site
@@ -67,12 +67,14 @@ Ce classement est actualisé automatiquement chaque semaine à partir des statis
 <div class="about-section" markdown>
 <div class="about-text" markdown>
 
-**Abdou Aziz Darc** (Géomaticien & Géographe)
+**Abdou Aziz Darc - Géomaticien, géographe et télépilote drone**
 
-Géographe de formation et télépilote drone, je traduis la complexité des territoires en modèles numériques précis, entre missions de terrain, analyse spatiale et développement logiciel en Python.
+J’explore les territoires à travers la cartographie, l’analyse spatiale, la télédétection, la photogrammétrie et le développement d’outils adaptés aux besoins du terrain.
 
+Je défends une approche ouverte de la géomatique, fondée autant que possible sur les logiciels libres, les données accessibles et le partage des méthodes. Cette démarche permet de mieux comprendre les outils, de favoriser l’autonomie et de construire des solutions reproductibles.
 
-**Pourquoi ce site ?** Parce que la connaissance est stérile si elle reste isolée. Xootay Gox Yi est à la fois un portfolio, un laboratoire personnel et un espace de transmission technique.
+Ce site rassemble mes retours d’expérience, mes analyses et les ressources que je souhaite rendre utiles aux professionnels, aux étudiants et à toute personne intéressée par la géomatique.
+
 
 </div>
 <div class="about-image">
