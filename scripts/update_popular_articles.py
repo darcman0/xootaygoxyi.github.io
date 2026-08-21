@@ -86,7 +86,11 @@ def extract_hits(payload: dict) -> list[dict]:
 
 
 def fetch_popular_articles(token: str, articles: dict[str, dict]) -> list[dict]:
-    now = datetime.now(timezone.utc)
+    now = datetime.now(timezone.utc).replace(
+    minute=0,
+    second=0,
+    microsecond=0,
+)
     start = now - timedelta(days=30)
     params = {
         "limit": LIMIT,
