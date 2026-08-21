@@ -2,7 +2,7 @@
 date: 
   created: 2025-04-10
   updated: 2026-08-16
-
+image: https://assets.xootaygoxyi.com/assets/blog/mangroves_we_forest_terrain/DJI_20250711100605_0001_V.webp
 authors:
   - darc
 categories:

@@ -1,6 +1,7 @@
 ---
 date: 
   created: 2026-05-29
+image: blog/assets/kobo_api_v1/article_presentation_img.jpg
 authors:
   - darc
 title: "Connexion API Kobotoolbox vers Excel"

@@ -1,7 +1,7 @@
 ---
 date:
   created: 2026-06-07
-image: ../assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png
+image: blog/assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png
 authors:
   - darc
 categories:
