@@ -1,0 +1,39 @@
+name: Mettre à jour les articles populaires
+
+on:
+  schedule:
+    # Une seule exécution par semaine : lundi à 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-popular-articles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances nécessaires
+        run: pip install requests PyYAML
+
+      - name: Récupérer les statistiques GoatCounter
+        env:
+          GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE: ${{ secrets.GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE }}
+        run: python scripts/update_popular_articles.py
+
+      - name: Enregistrer le classement mis à jour
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/assets/data/popular-articles.json
+          git diff --cached --quiet || git commit -m "chore: mettre à jour les articles populaires"
+          git push

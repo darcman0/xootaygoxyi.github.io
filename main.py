@@ -112,7 +112,9 @@ def get_latest_blog_posts(docs_dir, limit=3):
         if not date:
             continue
 
-        title = get_blog_title(filepath)
+        # Material utilise le titre du front matter pour générer le slug.
+        # Le titre Markdown reste une solution de secours pour les anciens articles.
+        title = meta.get("title") or get_blog_title(filepath)
         posts.append({
             "title": title,
             "image": meta.get("image", ""),
@@ -121,7 +123,6 @@ def get_latest_blog_posts(docs_dir, limit=3):
             "date": str(date),
             "url": f"blog/{slugify_blog_title(title)}/",
         })
-
 
     posts.sort(key=lambda post: post["date"], reverse=True)
     return posts[:limit]
