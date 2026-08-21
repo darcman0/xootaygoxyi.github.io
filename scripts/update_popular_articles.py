@@ -6,7 +6,8 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
+
 
 import requests
 import yaml
@@ -69,8 +70,12 @@ def article_index() -> dict[str, dict]:
 
 
 def normalize_path(value: str) -> str:
-    if value.startswith("http://") or value.startswith("https://"):
+    if value.startswith("http://" ) or value.startswith("https://" ):
         value = urlparse(value).path
+
+    # GoatCounter peut renvoyer les caractères accentués encodés dans l’URL.
+    value = unquote(value)
+
     if not value.startswith("/"):
         value = "/" + value
     if not value.endswith("/"):
