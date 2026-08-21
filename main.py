@@ -136,7 +136,6 @@ def render_latest_blog_posts(posts):
 
     for post in posts:
         categories = " · ".join(post["categories"])
-        description = post["description"]
         image = post.get("image", "")
 
         image_html = ""
@@ -154,7 +153,6 @@ def render_latest_blog_posts(posts):
     <div class="latest-post-card-content">
         <p class="latest-post-date">{post['date']} · {categories}</p>
         <h3>{post['title']}</h3>
-        <p>{description}</p>
         <a href="{post['url']}" class="md-button">Lire l'article →</a>
     </div>
 </div>
@@ -212,12 +210,12 @@ def render_popular_blog_posts(posts):
                 loading="lazy"
             >'''
 
-        views = post.get("views", 0)
+        
         cards.append(f"""
 <div class="latest-post-card popular-post-card">
     {image_html}
     <div class="latest-post-card-content">
-        <p class="latest-post-date">{categories} · {views} vue(s)</p>
+        <p class="latest-post-date">{post.get('date', '')} · {categories}</p>
         <h3>{post.get('title', 'Article sans titre')}</h3>
         <a href="{post.get('url', '#')}" class="md-button">Lire l'article →</a>
     </div>
