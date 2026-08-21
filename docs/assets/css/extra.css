@@ -313,7 +313,6 @@
   }
 }
 
-
 /* Cartes des derniers articles */
 .latest-posts-grid {
   display: grid;
@@ -367,7 +366,7 @@
 }
 
 .latest-post-card .md-button {
-  align-self: flex-start;
+  align-self: center;
   margin-top: auto;
 }
 
@@ -396,3 +395,4 @@
     transform: none;
   }
 }
+
