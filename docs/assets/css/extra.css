@@ -396,3 +396,24 @@
   }
 }
 
+/* Images des cartes d'articles */
+.latest-post-image {
+  display: block;
+  width: calc(100% + 2.5rem);
+  height: 170px;
+  margin: -1.25rem -1.25rem 1rem;
+  object-fit: cover;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.latest-post-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .latest-post-image {
+    height: 190px;
+  }
+}

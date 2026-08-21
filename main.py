@@ -115,11 +115,13 @@ def get_latest_blog_posts(docs_dir, limit=3):
         title = get_blog_title(filepath)
         posts.append({
             "title": title,
+            "image": meta.get("image", ""),
             "description": meta.get("description", ""),
             "categories": meta.get("categories", []),
             "date": str(date),
             "url": f"blog/{slugify_blog_title(title)}/",
         })
+
 
     posts.sort(key=lambda post: post["date"], reverse=True)
     return posts[:limit]
@@ -132,13 +134,26 @@ def render_latest_blog_posts(posts):
     for post in posts:
         categories = " · ".join(post["categories"])
         description = post["description"]
+        image = post.get("image", "")
+
+        image_html = ""
+        if image:
+            image_html = f'''<img
+                class="latest-post-image"
+                src="{image}"
+                alt="Illustration de : {post['title']}"
+                loading="lazy"
+            >'''
 
         cards.append(f"""
 <div class="latest-post-card">
-    <p class="latest-post-date">{post['date']} · {categories}</p>
-    <h3>{post['title']}</h3>
-    <p>{description}</p>
-    <a href="{post['url']}" class="md-button">Lire l'article →</a>
+    {image_html}
+    <div class="latest-post-card-content">
+        <p class="latest-post-date">{post['date']} · {categories}</p>
+        <h3>{post['title']}</h3>
+        <p>{description}</p>
+        <a href="{post['url']}" class="md-button">Lire l'article →</a>
+    </div>
 </div>
 """)
 
