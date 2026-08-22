@@ -1,0 +1,98 @@
+# Carte sociale Xootay Gox Yi — Ocean
+# Logo officiel inchangé, sans cartouche derrière le logo.
+
+definitions:
+  - &background_image layouts/ocean-background.png
+  - &font_family >-
+    {%- if config.theme.font is mapping -%}
+      {{ config.theme.font.get("text", "Roboto") }}
+    {%- else -%}
+      Roboto
+    {%- endif -%}
+  - &site_name >-
+    {{ config.site_name }}
+  - &page_title >-
+    {{ page.meta.get("title", page.title) }}
+  - &page_title_with_site_name >-
+    {%- if not page.is_homepage -%}
+      {{ page.meta.get("title", page.title) }} - {{ config.site_name }}
+    {%- else -%}
+      {{ config.site_name }}
+    {%- endif -%}
+  - &page_description >-
+    {{ page.meta.get("description", config.site_description) | x }}
+  - &logo >-
+    {{ config.docs_dir }}/{{ config.theme.logo }}
+
+tags:
+  og:type: website
+  og:title: *page_title_with_site_name
+  og:description: *page_description
+  og:image: "{{ image.url }}"
+  og:image:type: "{{ image.type }}"
+  og:image:width: "{{ image.width }}"
+  og:image:height: "{{ image.height }}"
+  og:url: "{{ page.canonical_url }}"
+  twitter:card: summary_large_image
+  twitter:title: *page_title_with_site_name
+  twitter:description: *page_description
+  twitter:image: "{{ image.url }}"
+
+size: { width: 1200, height: 630 }
+layers:
+  # Fond dégradé Ocean + motif hydrographique.
+  - background:
+      image: *background_image
+
+  # Logo officiel posé directement sur le fond, sans cartouche.
+  - size: { width: 88, height: 88 }
+    offset: { x: 64, y: 58 }
+    background:
+      image: *logo
+
+  # Nom du site.
+  - size: { width: 900, height: 48 }
+    offset: { x: 176, y: 76 }
+    typography:
+      content: *site_name
+      color: "#173f3a"
+      font:
+        family: *font_family
+        style: Bold
+
+  # Titre de l’article.
+  - size: { width: 850, height: 230 }
+    offset: { x: 64, y: 196 }
+    typography:
+      content: *page_title
+      overflow: shrink
+      align: start center
+      color: "#173f3a"
+      line:
+        amount: 3
+        height: 1.2
+      font:
+        family: *font_family
+        style: Bold
+
+  # Description de l’article.
+  - size: { width: 850, height: 76 }
+    offset: { x: 64, y: 444 }
+    typography:
+      content: *page_description
+      overflow: shrink
+      align: start center
+      color: "#254d55"
+      line:
+        amount: 2
+        height: 1.35
+      font:
+        family: *font_family
+        style: Regular
+
+  # Accent visuel inférieur.
+  - size: { width: 1072, height: 8 }
+    offset: { x: 64, y: 570 }
+    icon:
+      value: material/minus
+      color: "#e7ff67"
