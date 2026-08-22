@@ -5,7 +5,8 @@ description: "Découvrez mes articles techniques et retours d'expérience : prot
 
 # Blog
 
-### Bienvenue sur l'espace d'analyse et de partage de **Xootay Gox Yi**. Cet espace est dédié aux retours d'expérience, aux protocoles de traitement de données et aux réflexions sur la géomatique. La science étant une démarche collective, cet espace n'a pas vocation à être une vitrine personnelle exclusive. Vous y découvrirez également des articles rédigés en collaboration, reflétant la diversité et la richesse des échanges techniques qui nourrissent ma pratique.
+### Bienvenue sur _Chroniques Spatiales_  le blog de **Xootay Gox Yi**. J’y partage des tutoriels, des retours de terrain et des méthodes de traitement de données en géomatique. Certains articles sont aussi écrits avec d’autres professionnels, à partir de projets et d’échanges techniques.
+
 
 ---
 <div class="followit-wrapper">
@@ -78,12 +79,13 @@ description: "Découvrez mes articles techniques et retours d'expérience : prot
 
 <form action="https://api.follow.it/subscription-form/bmV4Tm1wWUVlUlZRQ1ZJdmxrU28rc1hiRytFMGp1SWUxR3dDaTBxakwyZGRPMG91QlBqRFJiczdtOXhBVVJsL2FHelM2ZUtFVFRRaXRSUm81akQycGh5S0g3U2N5YVhYSlJ3Y3hjRU1JanlSMkFtSjhzelE1b2YzVHFLZTFaR1N8WjN0ZXFjbFBnZVRzZWdpMXp4a0o5WGlEaHhqZXlwK253V1VZOWdGM1Bobz0=/8" method="post">
   <h5>Recevoir les nouveaux articles par email</h5>
-  <input type="email" name="email" required placeholder="Votre adresse email" spellcheck="false">
+  <input type="email" name="email" required placeholder="Votre adresse email" spellcheck="false" autocomplete="email" >
   <button type="submit">S'abonner</button>
 </form>
 
 <p class="followit-powered">
-  Propulsé par <a href="https://follow.it" target="_blank">follow.it</a>
+  Propulsé par <a href="https://follow.it" target="_blank" rel="noopener noreferrer">follow.it</a>
+
 </p>
 
 </div>
