@@ -108,7 +108,9 @@ plugins:
   
 
 hooks:
+  - hooks/related_posts.py
   - hooks/socialmedia.py
+
 
 # ============================================================
 # NAVIGATION
