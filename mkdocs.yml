@@ -5,7 +5,7 @@
 # ============================================================
 
 site_name: "Xootay Gox Yi"
-site_description: "Xootay Gox Yi | Expertise en géomatique, SIG, imagerie drone et analyses spatiales au Sénégal - Projets et ressources techniques proposé par Abdou Aziz Darc."
+site_description: "Géomatique, SIG, imagerie drone et analyses spatiales au Sénégal. Projets, tutoriels et ressources techniques par Abdou Aziz Darc."
 site_author: "Abdou Aziz Darc"
 site_url: "https://xootaygoxyi.com/"
 
@@ -43,10 +43,8 @@ theme:
 
 extra_css:
   - assets/css/extra.css
-  - https://unpkg.com/aos@2.3.1/dist/aos.css
 
 extra_javascript:
-  - https://unpkg.com/aos@2.3.1/dist/aos.js
   - assets/js/custom.js
 
 markdown_extensions:

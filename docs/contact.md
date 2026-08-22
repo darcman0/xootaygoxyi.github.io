@@ -30,7 +30,7 @@ Une mission, une collaboration, une question sur ce que vous avez trouvé ici. J
 
 Si tu préfères passer par le formulaire ci-dessous, je reçois la notification et je te réponds dès que possible.
 
-<form action="https://formspree.io/f/xrpzypgg" method="POST" class="contact-form" id="contactForm">
+<form action="https://formspree.io/f/xrpzypgg" method="POST" class="contact-form" id="contactForm" autocomplete="on">
   
   <!-- Piège à spam (Honeypot invisible) -->
   <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
@@ -38,16 +38,16 @@ Si tu préfères passer par le formulaire ci-dessous, je reçois la notification
   <div class="form-row">
     <div class="form-group">
       <label for="prenom">Prénom</label>
-      <input type="text" name="prenom" id="prenom" required placeholder="Ton prenom">
+      <input type="text" name="prenom" id="prenom" required placeholder="Ton prénom" autocomplete="given-name" >
     </div>
     <div class="form-group">
       <label for="nom">Nom</label>
-      <input type="text" name="nom" id="nom" required placeholder="Ton nom">
+      <input type="text" name="nom" id="nom" required placeholder="Ton nom" autocomplete="family-name">
     </div>
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" name="email" id="email" required placeholder="ton@email.com">
+    <input type="email" name="email" id="email" required placeholder="ton@email.com" autocomplete="email">
     <small id="email-error" style="color: #e53935; display: none; margin-top: 0.3rem; font-size: 0.85rem;">Veuillez entrer une adresse email valide (ex: nom@domaine.com).</small>
   </div>
   <div class="form-group">

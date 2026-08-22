@@ -88,7 +88,8 @@
         }
   
         for (let i = 0; i < numberOfParticles; i += 1) {
-          const size = Math.random() * 1.1 + 0.6;
+          // Particules légèrement plus grandes pour une meilleure visibilité.
+          const size = Math.random() * 1.2 + 0.8;
           const x = Math.random() * (
             controller.canvas.width - size * 2
           ) + size;
@@ -149,11 +150,11 @@
           'data-md-color-scheme'
         ) === 'slate';
         const pointColor = isDarkMode
-          ? 'rgba(255, 255, 255, 0.16)'
-          : 'rgba(0, 0, 0, 0.10)';
+          ? 'rgba(255, 255, 255, 0.24)'
+          : 'rgba(0, 0, 0, 0.14)';
         const lineColor = isDarkMode
-          ? 'rgba(255, 255, 255, 0.055)'
-          : 'rgba(0, 0, 0, 0.045)';
+          ? 'rgba(255, 255, 255, 0.085)'
+          : 'rgba(0, 0, 0, 0.07)';
   
         for (let i = 0; i < controller.particles.length; i += 1) {
           controller.particles[i].update(pointColor);
@@ -256,7 +257,6 @@
       return controller;
     }
   
-    
     function getController() {
       if (!window[STATE_KEY]) {
         window[STATE_KEY] = createController();
@@ -270,4 +270,5 @@
       controller.attachButton();
     });
   })();
+  
   

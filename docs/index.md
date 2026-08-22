@@ -102,4 +102,3 @@ Ce site rassemble mes retours d’expérience, mes analyses et les ressources qu
 
 </div>
 
-[En savoir plus sur moi ? :material-arrow-right:](contact.md){ .md-button }
