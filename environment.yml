@@ -1,14 +1,32 @@
 name: portfolio
+
 channels:
   - conda-forge
-  - defaults
+
 dependencies:
   - python=3.11
+  - mkdocs
+  - mkdocs-material
+  - pyyaml
+  - nbformat
+  - pillow
+  - cairosvg
+  - cairo
+  - openssl
+  - certifi
   - pip
+
+  # Plugins absents des canaux Conda, installés automatiquement par Conda via pip.
   - pip:
-    - mkdocs-material>=9.5
-    - mkdocs-jupyter
-    - mkdocs-awesome-pages-plugin
-    - mkdocs-macros-plugin
-    - mkdocs-rss-plugin
-    - mkdocs-glightbox
+      - mkdocs-jupyter
+      - mkdocs-macros-plugin
+      - mkdocs-rss-plugin
+      - mkdocs-glightbox
+
+# Le plugin mkdocs-awesome-pages-plugin n'est pas inclus :
+# il n'est pas activé dans mkdocs.yml et son fichier .pages.yaml
+# sera traité séparément, sans modifier pour l'instant Réalisations.
+
+# Aucun pip install manuel n'est nécessaire dans cet environnement.
+
+# Créé pour Xootay Gox Yi — environnement de test isolé.
