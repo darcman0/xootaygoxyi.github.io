@@ -2,7 +2,7 @@ name: Mettre à jour les articles populaires
 
 on:
   schedule:
-    # Une seule exécution par semaine : lundi à 06:00 UTC
+    # Chaque lundi à 06:00 UTC, soit 06:00 au Sénégal
     - cron: "0 6 * * 1"
   workflow_dispatch:
 
@@ -28,7 +28,24 @@ jobs:
       - name: Récupérer les statistiques GoatCounter
         env:
           GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE: ${{ secrets.GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE }}
-        run: python scripts/update_popular_articles.py
+        run: |
+          for attempt in 1 2 3; do
+            echo "Tentative ${attempt}/3 de récupération des statistiques…"
+
+            if python scripts/update_popular_articles.py; then
+              echo "Statistiques récupérées avec succès."
+              exit 0
+            fi
+
+            if [ "$attempt" -lt 3 ]; then
+              wait_minutes=$((attempt * 5))
+              echo "GoatCounter est momentanément indisponible. Nouvelle tentative dans ${wait_minutes} minute(s)."
+              sleep "$((wait_minutes * 60))"
+            fi
+          done
+
+          echo "::error::Impossible de récupérer les statistiques GoatCounter après 3 tentatives."
+          exit 1
 
       - name: Enregistrer le classement mis à jour
         run: |
