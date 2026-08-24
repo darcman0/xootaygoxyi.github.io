@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T14:38:28.608438+00:00",
+  "generated_at": "2026-08-24T16:02:01.288688+00:00",
   "period_days": 30,
   "articles": [
     {
@@ -14,13 +14,13 @@
       "views": 2
     },
     {
-      "title": "Exporter sélectivement ses mises en page QGIS avec PyQGIS (300 DPI, sans perte)",
-      "url": "/blog/exporter-sélectivement-ses-mises-en-page-qgis-avec-pyqgis-300-dpi-sans-perte/",
-      "image": "https://anitagraser.com/wp-content/uploads/2024/05/pyqgis.png",
-      "date": "2026-08-16",
+      "title": "Connexion API Kobotoolbox vers Excel",
+      "url": "/blog/connexion-api-kobotoolbox-vers-excel/",
+      "image": "blog/assets/kobo_api_v1/article_presentation_img.jpg",
+      "date": "2026-05-29",
       "categories": [
-        "SIG",
-        "Python"
+        "Enquêtes",
+        "Synchronisation"
       ],
       "views": 1
     }
