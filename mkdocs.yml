@@ -75,8 +75,6 @@ plugins:
   - social:
       cards_layout_dir: layouts
       cards_layout: xgy-ocean
-      watch:
-        - layouts
   - mkdocs-jupyter
   - macros
   - glightbox:
