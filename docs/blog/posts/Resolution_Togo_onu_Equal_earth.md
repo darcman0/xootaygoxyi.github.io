@@ -24,13 +24,13 @@ description: "La résolution portée par le Togo à l'ONU relance le débat sur 
 ![Carte mondiale Equal Earth](https://upload.wikimedia.org/wikipedia/commons/c/cd/Equal-Earth-Map-150E.jpg){ .img-center }
 *Carte mondiale politique en projection Equal Earth. Auteur : Tom Patterson, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Equal-Earth-Map-150E.jpg), image placée dans le domaine public.*
 
-Le 4 septembre 2026, l'Assemblée générale des Nations Unies a adopté la résolution **A/80/L.104**, intitulée *Correct the map: rebalancing global cartographic representation and promoting equitable representation of the world's regions, particularly Africa*. Le texte a été approuvé par **164 voix contre une**, avec **six abstentions** [^1] [^2]. Le texte officiel est disponible dans la bibliothèque numérique des Nations Unies [^7].
-<!-- more -->
+Le 4 septembre 2026, l'Assemblée générale des Nations Unies a adopté la résolution **A/80/L.104**, intitulée *Correct the map: rebalancing global cartographic representation and promoting equitable representation of the world's regions, particularly Africa*. Le texte a été approuvé par **164 voix contre une**, avec **six abstentions** <sup>[1](https://news.un.org/fr/story/2026/09/1159416)</sup> <sup>[2](https://press.un.org/en/2026/ga12779.doc.htm)</sup>. Le texte officiel est disponible dans la bibliothèque numérique des Nations Unies <sup>[7](https://docs.un.org/A/80/L.104)</sup>.
+
 Présentée au nom du Groupe des États africains, la résolution encourage un recours plus large aux projections cartographiques équivalentes, notamment à **Equal Earth**, lorsque la comparaison des superficies constitue l'objectif principal de la carte. Elle ne bannit toutefois pas la projection de Mercator et n'impose pas une carte unique aux États, aux écoles ou aux entreprises technologiques.
 
 La précision est importante. L'ONU n'a pas décrété la disparition de Mercator. Elle a accordé un soutien politique à une autre manière de représenter le monde, plus attentive aux superficies relatives et aux effets culturels des choix cartographiques.
 
-
+<!-- more -->
 
 ---
 
@@ -40,7 +40,7 @@ La projection de Mercator a été conçue au XVIe siècle pour répondre à un o
 
 Ces propriétés expliquent son intérêt historique pour la navigation et certains usages techniques. En revanche, Mercator déforme fortement les superficies à mesure que l'on s'éloigne de l'équateur. Les régions proches des pôles apparaissent beaucoup plus grandes qu'elles ne le sont réellement.
 
-Le Groenland peut ainsi sembler comparable à l'Afrique sur certaines cartes, alors que la superficie de l'Afrique est environ quatorze fois supérieure [^3]. Le problème ne vient pas d'une erreur de calcul. Il résulte du compromis mathématique propre à la projection.
+Le Groenland peut ainsi sembler comparable à l'Afrique sur certaines cartes, alors que la superficie de l'Afrique est environ quatorze fois supérieure <sup>[3](https://www.reuters.com/world/africa/un-approves-resolution-support-map-that-shows-africas-true-size-2026-09-04/)</sup>. Le problème ne vient pas d'une erreur de calcul. Il résulte du compromis mathématique propre à la projection.
 
 Il est impossible de représenter une surface sphérique sur un plan sans déformer au moins une propriété géométrique. La question porte donc sur le choix de la propriété que l'on souhaite préserver et sur l'usage que l'on fait ensuite de la carte.
 
@@ -51,7 +51,7 @@ Il est impossible de représenter une surface sphérique sur un plan sans défor
 
 ## Equal Earth, une projection équivalente pour les cartes mondiales
 
-La projection **Equal Earth** a été conçue en 2018 par les cartographes Bojan Šavrič, Tom Patterson et Bernhard Jenny. Il s'agit d'une projection pseudo-cylindrique équivalente, c'est-à-dire une projection qui conserve les superficies relatives des territoires représentés [^4] [^5]. La publication scientifique consacrée à sa conception est disponible dans l'*International Journal of Geographical Information Science* [^6].
+La projection **Equal Earth** a été conçue en 2018 par les cartographes Bojan Šavrič, Tom Patterson et Bernhard Jenny. Il s'agit d'une projection pseudo-cylindrique équivalente, c'est-à-dire une projection qui conserve les superficies relatives des territoires représentés <sup>[4](https://equal-earth.com/equal-earth-projection.html)</sup> <sup>[5](https://proj.org/operations/projections/eqearth.html)</sup>. La publication scientifique consacrée à sa conception est disponible dans l'*International Journal of Geographical Information Science* <sup>[6](https://doi.org/10.1080/13658816.2018.1504949)</sup>.
 
 Son apparence générale rappelle certaines projections utilisées dans les atlas, notamment la projection de Robinson. Toutefois, Equal Earth s'en distingue par la conservation des aires. Ses parallèles sont droits et ses bords courbés suggèrent la forme sphérique de la Terre.
 
@@ -106,7 +106,7 @@ Une **projection cartographique** transforme ensuite ces coordonnées géographi
 
 Mercator et Equal Earth sont des méthodes de projection. Elles peuvent toutes deux partir du référentiel géodésique WGS 84, tout en produisant des coordonnées planes différentes.
 
-Pour Equal Earth, le système couramment utilisé pour une carte mondiale centrée sur Greenwich est **WGS 84 / Equal Earth Greenwich, EPSG:8857** [^8]. Ses coordonnées sont exprimées en mètres. Il ne faut donc pas remplacer EPSG:4326 par EPSG:8857 en pensant qu'il s'agit simplement d'un autre format de latitude et longitude.
+Pour Equal Earth, le système couramment utilisé pour une carte mondiale centrée sur Greenwich est **WGS 84 / Equal Earth Greenwich, EPSG:8857** <sup>[8](https://epsg.io/8857)</sup>. Ses coordonnées sont exprimées en mètres. Il ne faut donc pas remplacer EPSG:4326 par EPSG:8857 en pensant qu'il s'agit simplement d'un autre format de latitude et longitude.
 
 Pour Mercator, plusieurs systèmes existent :
 
@@ -128,9 +128,9 @@ Une projection UTM adaptée à la zone d'étude est souvent plus pertinente :
 | UTM 28N | EPSG:32628 | De 18° Ouest à 12° Ouest |
 | UTM 29N | EPSG:32629 | De 12° Ouest à 6° Ouest |
 
-Le choix dépend de la longitude de la zone de travail et de l'emprise du projet. Pour une étude couvrant une grande partie du pays, il peut être préférable d'évaluer une projection nationale ou une projection équivalente adaptée à l'objectif, plutôt que de juxtaposer deux zones UTM sans analyse [^10] [^11].
+Le choix dépend de la longitude de la zone de travail et de l'emprise du projet. Pour une étude couvrant une grande partie du pays, il peut être préférable d'évaluer une projection nationale ou une projection équivalente adaptée à l'objectif, plutôt que de juxtaposer deux zones UTM sans analyse <sup>[10](https://epsg.io/32628)</sup> <sup>[11](https://epsg.io/32629)</sup>.
 
-Dans QGIS, la bonne pratique consiste à conserver les données sources dans leur CRS documenté, souvent **EPSG:4326**, puis à reprojeter une copie vers le système adapté à la visualisation ou au calcul [^9].
+Dans QGIS, la bonne pratique consiste à conserver les données sources dans leur CRS documenté, souvent **EPSG:4326**, puis à reprojeter une copie vers le système adapté à la visualisation ou au calcul <sup>[9](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html)</sup>.
 
 Avec GeoPandas :
 
@@ -162,7 +162,7 @@ En pratique, le GCS décrit le lien avec la Terre, tandis que le PCS définit la
 
 Le Togo présente cette résolution comme une initiative en faveur d'une représentation plus équitable du monde, et non comme une attaque contre une tradition cartographique particulière.
 
-Le ministre togolais des Affaires étrangères, Robert Dussey, a présenté la carte comme un outil cognitif qui influence la manière dont les générations apprennent à voir le monde [^1] [^2].
+Le ministre togolais des Affaires étrangères, Robert Dussey, a présenté la carte comme un outil cognitif qui influence la manière dont les générations apprennent à voir le monde <sup>[1](https://news.un.org/fr/story/2026/09/1159416)</sup> <sup>[2](https://press.un.org/en/2026/ga12779.doc.htm)</sup>.
 
 Cette position inscrit la cartographie dans un débat plus large sur :
 
@@ -174,7 +174,7 @@ Cette position inscrit la cartographie dans un débat plus large sur :
 
 Pour les promoteurs du texte, corriger les disproportions visuelles de certaines cartes revient à reconnaître que les régions tropicales et équatoriales ne doivent pas apparaître réduites par le seul effet d'une projection conçue pour un autre objectif.
 
-Selon Reuters, le Togo souhaite modifier ses supports scolaires avant la fin de l'année 2026 et encourager d'autres gouvernements, établissements d'enseignement, organisations internationales et entreprises technologiques à utiliser davantage Equal Earth ou d'autres projections équivalentes [^3].
+Selon Reuters, le Togo souhaite modifier ses supports scolaires avant la fin de l'année 2026 et encourager d'autres gouvernements, établissements d'enseignement, organisations internationales et entreprises technologiques à utiliser davantage Equal Earth ou d'autres projections équivalentes <sup>[3](https://www.reuters.com/world/africa/un-approves-resolution-support-map-that-shows-africas-true-size-2026-09-04/)</sup>.
 
 Cette orientation pourrait concerner :
 
@@ -193,11 +193,11 @@ La cartographie devient alors un instrument de diplomatie culturelle et de réé
 
 ## Une résolution politique, mais non contraignante
 
-La résolution adoptée par l'Assemblée générale n'a pas de force obligatoire. Elle formule une orientation politique et pédagogique. Elle encourage les acteurs publics et privés à choisir des projections équivalentes lorsque la comparaison des superficies est pertinente, mais elle ne prescrit pas une norme unique [^1] [^2] [^3].
+La résolution adoptée par l'Assemblée générale n'a pas de force obligatoire. Elle formule une orientation politique et pédagogique. Elle encourage les acteurs publics et privés à choisir des projections équivalentes lorsque la comparaison des superficies est pertinente, mais elle ne prescrit pas une norme unique <sup>[1](https://news.un.org/fr/story/2026/09/1159416)</sup> <sup>[2](https://press.un.org/en/2026/ga12779.doc.htm)</sup> <sup>[3](https://www.reuters.com/world/africa/un-approves-resolution-support-map-that-shows-africas-true-size-2026-09-04/)</sup>.
 
 Le texte précise également que la représentation cartographique ne règle aucune question de souveraineté, de statut territorial, de délimitation ou de frontières internationalement reconnues.
 
-Cette clarification répond notamment aux préoccupations exprimées par l'Ukraine concernant la représentation de territoires temporairement occupés dans Equal Earth [^2].
+Cette clarification répond notamment aux préoccupations exprimées par l'Ukraine concernant la représentation de territoires temporairement occupés dans Equal Earth <sup>[2](https://press.un.org/en/2026/ga12779.doc.htm)</sup>.
 
 Les États-Unis ont voté contre le texte, qu'ils ont présenté comme lié à un projet idéologique plus large et comme une distraction par rapport aux priorités centrales de l'Organisation.
 
@@ -259,28 +259,20 @@ Dans ce débat, le Togo défend une idée simple : représenter les superficies 
 
 ---
 
+## Références
 
+1. [L'ONU soutient la campagne africaine pour redessiner la carte du monde](https://news.un.org/fr/story/2026/09/1159416), ONU Info, 4 septembre 2026.
+2. [General Assembly Adopts Text to “Correct the Map”](https://press.un.org/en/2026/ga12779.doc.htm), United Nations Meetings Coverage, 4 septembre 2026.
+3. [UN approves resolution in support of map that shows Africa's true size](https://www.reuters.com/world/africa/un-approves-resolution-support-map-that-shows-africas-true-size-2026-09-04/), Reuters, 4 septembre 2026.
+4. [Equal Earth projection](https://equal-earth.com/equal-earth-projection.html).
+5. [Equal Earth, documentation PROJ](https://proj.org/operations/projections/eqearth.html).
+6. [The Equal Earth map projection](https://doi.org/10.1080/13658816.2018.1504949), Šavrič, Patterson et Jenny, *International Journal of Geographical Information Science*, 2019.
+7. [Résolution A/80/L.104](https://docs.un.org/A/80/L.104), Bibliothèque numérique des Nations Unies.
+8. [EPSG:8857, WGS 84 / Equal Earth Greenwich](https://epsg.io/8857).
+9. [Coordinate Reference Systems](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html), documentation QGIS.
+10. [EPSG:32628, WGS 84 / UTM zone 28N](https://epsg.io/32628).
+11. [EPSG:32629, WGS 84 / UTM zone 29N](https://epsg.io/32629).
 
-[^1]: [L'ONU soutient la campagne africaine pour redessiner la carte du monde](https://news.un.org/fr/story/2026/09/1159416), ONU Info, 4 septembre 2026.
+---
 
-[^2]: [General Assembly Adopts Text to “Correct the Map”](https://press.un.org/en/2026/ga12779.doc.htm), United Nations Meetings Coverage, 4 septembre 2026.
-
-[^3]: [UN approves resolution in support of map that shows Africa's true size](https://www.reuters.com/world/africa/un-approves-resolution-support-map-that-shows-africas-true-size-2026-09-04/), Reuters, 4 septembre 2026.
-
-[^4]: [Equal Earth projection](https://equal-earth.com/equal-earth-projection.html).
-
-[^5]: [Equal Earth, documentation PROJ](https://proj.org/operations/projections/eqearth.html).
-
-[^6]: [The Equal Earth map projection](https://doi.org/10.1080/13658816.2018.1504949), Šavrič, Patterson et Jenny, *International Journal of Geographical Information Science*, 2019.
-
-[^7]: [Résolution A/80/L.104](https://docs.un.org/A/80/L.104), Bibliothèque numérique des Nations Unies.
-
-[^8]: [EPSG:8857, WGS 84 / Equal Earth Greenwich](https://epsg.io/8857).
-
-[^9]: [Coordinate Reference Systems](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html), documentation QGIS.
-
-[^10]: [EPSG:32628, WGS 84 / UTM zone 28N](https://epsg.io/32628).
-
-[^11]: [EPSG:32629, WGS 84 / UTM zone 29N](https://epsg.io/32629).
-
-
+*Article préparé pour Xootay Gox Yi, blog de géomatique, cartographie et sciences spatiales au Sénégal.*
