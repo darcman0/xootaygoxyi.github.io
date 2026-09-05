@@ -25,12 +25,12 @@ description: "La résolution portée par le Togo à l'ONU relance le débat sur 
 *Carte mondiale politique en projection Equal Earth. Auteur : Tom Patterson, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Equal-Earth-Map-150E.jpg), image placée dans le domaine public.*
 
 Le 4 septembre 2026, l'Assemblée générale des Nations Unies a adopté la résolution **A/80/L.104**, intitulée *Correct the map: rebalancing global cartographic representation and promoting equitable representation of the world's regions, particularly Africa*. Le texte a été approuvé par **164 voix contre une**, avec **six abstentions** [^1] [^2]. Le texte officiel est disponible dans la bibliothèque numérique des Nations Unies [^7].
-
+<!-- more -->
 Présentée au nom du Groupe des États africains, la résolution encourage un recours plus large aux projections cartographiques équivalentes, notamment à **Equal Earth**, lorsque la comparaison des superficies constitue l'objectif principal de la carte. Elle ne bannit toutefois pas la projection de Mercator et n'impose pas une carte unique aux États, aux écoles ou aux entreprises technologiques.
 
 La précision est importante. L'ONU n'a pas décrété la disparition de Mercator. Elle a accordé un soutien politique à une autre manière de représenter le monde, plus attentive aux superficies relatives et aux effets culturels des choix cartographiques.
 
-<!-- more -->
+
 
 ---
 
