@@ -14,7 +14,7 @@ def on_page_markdown(markdown, **kwargs):
         return markdown
 
     # Sécurisation de la construction de l'URL pour éviter le crash CI/CD
-    base_url = config.site_url or "https://xootayugox.github.io"
+    base_url = config.site_url or "https://xootaygoxyi.com"
     page_url = f"{base_url.rstrip('/')}/{page.url}"
     
     page_title = urllib.parse.quote(page.title + '\n')

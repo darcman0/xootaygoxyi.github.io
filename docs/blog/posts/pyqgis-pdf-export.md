@@ -1,13 +1,18 @@
 ---
 date:
   created: 2026-08-16
-image: https://anitagraser.com/wp-content/uploads/2024/05/pyqgis.png
+  updated: 2026-09-06
+image: blog/assets/pyqgis_pdf_export/pyqgis.png
 authors:
   - darc
 categories:
   - SIG
   - Python
-
+tags:
+  - QGIS
+  - PyQGIS
+  - Automatisation
+  - Cartographie
 description: Comment exporter uniquement une liste ciblée de mises en page QGIS en haute précision (300 DPI, sans simplification de géométrie) avec un script PyQGIS, à partir d'un cas réel sur 78 parcelles et 11 paramètres de fertilité des sols.
 ---
 

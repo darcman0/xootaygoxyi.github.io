@@ -1,13 +1,19 @@
 ---
 date: 
   created: 2026-05-29
+  updated: 2026-09-06
 image: blog/assets/kobo_api_v1/article_presentation_img.jpg
 authors:
   - darc
 title: "Connexion API Kobotoolbox vers Excel"
 categories:
   - Enquêtes
-  - Synchronisation
+  - Terrain
+tags:
+  - KoboToolbox
+  - Excel
+  - API
+  - Collecte de données
 description: "Guide technique pour automatiser la récupération de données Kobotoolbox vers Excel via l'API V1, éliminant les exports manuels répétitifs."
 ---
 # Connexion de l'API V1 de Kobotoolbox avec Microsoft Excel

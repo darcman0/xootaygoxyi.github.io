@@ -8,7 +8,11 @@ authors:
 categories:
   - Terrain
   - Drone
-
+tags:
+  - Drone
+  - Photogrammétrie
+  - Mangrove
+  - Sénégal
 description: Retour d'expérience sur la cartographie d'environ 7000 hectares de reboisements de mangrove pour WeForest dans le Sine-Saloum et la Casamance. 
 ---
 
