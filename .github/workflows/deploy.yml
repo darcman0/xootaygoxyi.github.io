@@ -36,7 +36,7 @@ jobs:
       - name: Update popular articles
         env:
           GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE: ${{ secrets.GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE }}
-        run: python update_popular_articles.py
+        run: python scripts/update_popular_articles.py
 
       # ÉTAPE 2 : Sauvegarde du JSON mis à jour sur la branche main
       - name: Commit updated popular articles JSON
