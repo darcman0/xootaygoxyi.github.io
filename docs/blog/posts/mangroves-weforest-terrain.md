@@ -1,10 +1,11 @@
 ---
-date: 
+date:
   created: 2025-04-10
   updated: 2026-08-16
 image: https://assets.xootaygoxyi.com/assets/blog/mangroves_we_forest_terrain/DJI_20250711100605_0001_V.webp
 authors:
   - darc
+title: "Cartographie drone de 7 000 ha de mangroves au Sénégal"
 categories:
   - Terrain
   - Drone
@@ -13,10 +14,12 @@ tags:
   - Photogrammétrie
   - Mangrove
   - Sénégal
-description: Retour d'expérience sur la cartographie d'environ 7000 hectares de reboisements de mangrove pour WeForest dans le Sine-Saloum et la Casamance. 
+description: "Retour de terrain sur une cartographie drone de 7 000 hectares de mangroves au Sine-Saloum et en Casamance, avec 750 sites suivis."
 ---
 
-# Cartographier près de 7 500 ha de mangroves pour WeForest : retour de terrain
+
+# Cartographier près de 7 000 ha de mangroves pour WeForest : retour de terrain
+
 
 Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne d'environ 7 000 hectares de reboisements de mangrove dans les îles du Sine-Saloum et en Casamance pour le compte de WeForest, via Earth Géomatique. 750 sites, plusieurs types de drones, des conditions de terrain extrêmes. Voici ce que j'en retiens.
 

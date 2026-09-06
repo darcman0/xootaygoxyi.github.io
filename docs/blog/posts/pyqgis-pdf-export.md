@@ -5,6 +5,7 @@ date:
 image: blog/assets/pyqgis_pdf_export/pyqgis.png
 authors:
   - darc
+title: "Exporter des mises en page QGIS en PDF avec PyQGIS"
 categories:
   - SIG
   - Python
@@ -13,11 +14,12 @@ tags:
   - PyQGIS
   - Automatisation
   - Cartographie
-description: Comment exporter uniquement une liste ciblée de mises en page QGIS en haute précision (300 DPI, sans simplification de géométrie) avec un script PyQGIS, à partir d'un cas réel sur 78 parcelles et 11 paramètres de fertilité des sols.
+description: "Tutoriel PyQGIS pour exporter en PDF les mises en page QGIS sélectionnées, en 300 DPI et sans simplification de géométrie."
 ---
 
 
-# Exporter sélectivement ses mises en page QGIS avec PyQGIS (300 DPI, sans perte)
+# Exporter des mises en page QGIS en PDF avec PyQGIS
+
 
 Sur un projet de cartographie pédologique portant sur 78 parcelles réparties dans trois régions du Sénégal (Fatick, Kaolack, Saint-Louis) et 11 paramètres de fertilité des sols (azote, phosphore, potassium, calcium, magnésium, sodium, soufre, matière organique, CEC, pH, CE), le projet QGIS contenait les mises en page des trois régions mélangées. Je n'avais besoin d'exporter que celles de Fatick, ce qui rendait le Gestionnaire de mises en page peu pratique. Quand le projet contient des dizaines de mises en page et qu'on ne veut en exporter qu'une poignée en une seule fois, avec des réglages de précision stricts, il faut passer par PyQGIS.
 

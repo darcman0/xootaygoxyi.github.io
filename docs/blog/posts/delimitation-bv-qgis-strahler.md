@@ -4,6 +4,8 @@ date:
 image: blog/assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png
 authors:
   - darc
+title: "Délimitation d'un bassin versant avec SAGA GIS depuis QGIS"
+
 categories:
   - Hydrologie
   - Tutoriels

@@ -16,7 +16,9 @@ tags:
   - Sénégal
   - Projections cartographiques
   - EPSG
-description: "La résolution portée par le Togo à l'ONU relance le débat sur la représentation du monde, la projection Equal Earth et le choix des systèmes de coordonnées pour les cartes du Sénégal."
+title: "Equal Earth : le Togo ouvre un débat cartographique à l'ONU"
+description: "La résolution portée par le Togo à l'ONU remet Equal Earth et le choix des projections cartographiques au centre du débat sur la représentation de l'Afrique."
+
 ---
 
 # Le Togo porte à l'ONU une nouvelle bataille cartographique autour d'Equal Earth

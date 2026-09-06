@@ -5,7 +5,8 @@ date:
 image: blog/assets/kobo_api_v1/article_presentation_img.jpg
 authors:
   - darc
-title: "Connexion API Kobotoolbox vers Excel"
+title: "Importer des données KoboToolbox dans Excel avec l'API V1"
+
 categories:
   - Enquêtes
   - Terrain
@@ -14,7 +15,8 @@ tags:
   - Excel
   - API
   - Collecte de données
-description: "Guide technique pour automatiser la récupération de données Kobotoolbox vers Excel via l'API V1, éliminant les exports manuels répétitifs."
+description: "Tutoriel pour connecter l'API V1 de KoboToolbox à Excel, automatiser l'import des données de terrain et éviter les exports manuels répétitifs."
+
 ---
 # Connexion de l'API V1 de Kobotoolbox avec Microsoft Excel
 
