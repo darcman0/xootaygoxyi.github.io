@@ -5,3 +5,4 @@ mkdocs-rss-plugin
 mkdocs-glightbox
 PyYAML
 nbformat
+requests
