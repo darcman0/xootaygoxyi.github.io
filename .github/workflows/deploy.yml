@@ -1,12 +1,12 @@
-name: Run MkDocs and Create HTML pages
+name: Compilation et Déploiement du Site MkDocs
 
 on:
   push:
     branches:
       - main
   schedule:
-    # Actualisation automatique chaque dimanche à 00:00 UTC
-    - cron: '0 0 * * 0'
+    # Exécution automatique le 1er et le 15 de chaque mois à 06:00 UTC
+    - cron: "0 6 1,15 * *"
   workflow_dispatch:
 
 concurrency:
@@ -18,40 +18,64 @@ permissions:
 
 jobs:
   deploy:
+    name: Traitement et Publication
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Configuration de Python 3.11
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: pip
-          cache-dependency-path: requirements.txt
 
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
+      - name: Cache des dépendances pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
-      # ÉTAPE 1 : Génération du fichier JSON des articles populaires
-      - name: Update popular articles
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      # ÉTAPE 1 : Récupération des statistiques GoatCounter avec gestion de retentatives
+      - name: Récupérer les statistiques GoatCounter
         env:
           GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE: ${{ secrets.GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE }}
-        run: python scripts/update_popular_articles.py
+        run: |
+          for attempt in 1 2 3; do
+            echo "Tentative ${attempt}/3 de récupération des statistiques…"
+            if python scripts/update_popular_articles.py; then
+              echo "Statistiques récupérées avec succès."
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              wait_minutes=$((attempt * 5))
+              echo "GoatCounter momentanément indisponible. Nouvelle tentative dans ${wait_minutes} minute(s)."
+              sleep "$((wait_minutes * 60))"
+            fi
+          done
+          echo "::error::Impossible de récupérer les statistiques après 3 tentatives."
+          exit 1
 
-      # ÉTAPE 2 : Sauvegarde du JSON mis à jour sur la branche main
-      - name: Commit updated popular articles JSON
+      # ÉTAPE 2 : Mise à jour du JSON sur le dépôt
+      - name: Enregistrer le classement mis à jour dans le dépôt
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/assets/data/popular-articles.json
-          git diff --staged --quiet || (git commit -m "chore: mise à jour automatique des articles populaires [skip ci]" && git push)
+          git diff --cached --quiet || (git commit -m "chore: mise à jour automatique des articles populaires [skip ci]" && git push)
 
-      - name: Preserve CNAME if present
+      # ÉTAPE 3 : Conservation du CNAME pour le domaine personnalisé
+      - name: Préserver le domaine personnalisé (CNAME)
         run: |
           if [ -f CNAME ]; then
             cp CNAME docs/CNAME
           fi
 
-      # ÉTAPE 3 : Compilation et déploiement du site
-      - name: Deploy
+      # ÉTAPE 4 : Génération et déploiement du site MkDocs
+      - name: Générer et déployer le site MkDocs sur GitHub Pages
         run: mkdocs gh-deploy --force
