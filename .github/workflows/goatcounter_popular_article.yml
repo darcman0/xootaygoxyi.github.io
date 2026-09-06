@@ -2,9 +2,12 @@ name: Mettre à jour les articles populaires
 
 on:
   schedule:
-    # Chaque lundi à 06:00 UTC, soit 06:00 au Sénégal
-    - cron: "0 6 * * 1"
+    - cron: "0 6 1,15 * *"
   workflow_dispatch:
+
+concurrency:
+  group: update-popular-articles
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -12,7 +15,6 @@ permissions:
 jobs:
   update-popular-articles:
     runs-on: ubuntu-latest
-
     steps:
       - name: Récupérer le dépôt
         uses: actions/checkout@v4
@@ -22,8 +24,14 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Installer les dépendances nécessaires
-        run: pip install requests PyYAML
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-requests-pyyaml
+
+      - name: Installer les dépendances
+        run: pip install requests==2.32.3 PyYAML==6.0.2
 
       - name: Récupérer les statistiques GoatCounter
         env:
@@ -31,20 +39,17 @@ jobs:
         run: |
           for attempt in 1 2 3; do
             echo "Tentative ${attempt}/3 de récupération des statistiques…"
-
             if python scripts/update_popular_articles.py; then
               echo "Statistiques récupérées avec succès."
               exit 0
             fi
-
             if [ "$attempt" -lt 3 ]; then
               wait_minutes=$((attempt * 5))
-              echo "GoatCounter est momentanément indisponible. Nouvelle tentative dans ${wait_minutes} minute(s)."
+              echo "GoatCounter momentanément indisponible. Nouvelle tentative dans ${wait_minutes} minute(s)."
               sleep "$((wait_minutes * 60))"
             fi
           done
-
-          echo "::error::Impossible de récupérer les statistiques GoatCounter après 3 tentatives."
+          echo "::error::Impossible de récupérer les statistiques après 3 tentatives."
           exit 1
 
       - name: Enregistrer le classement mis à jour

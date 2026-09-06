@@ -8,7 +8,6 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
-
 import requests
 import yaml
 
@@ -47,6 +46,24 @@ def get_markdown_title(path: Path) -> str:
     return ""
 
 
+def get_last_update() -> datetime:
+    """
+    Lit la date de la dernière génération dans le JSON existant.
+    Si le fichier est absent ou illisible, remonte 90 jours en arrière
+    pour couvrir toute la période de publication du blog.
+    """
+    if not OUTPUT_FILE.exists():
+        return datetime.now(timezone.utc) - timedelta(days=90)
+    try:
+        data = json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
+        generated_at = data.get("generated_at", "")
+        if generated_at:
+            return datetime.fromisoformat(generated_at)
+    except (json.JSONDecodeError, ValueError):
+        pass
+    return datetime.now(timezone.utc) - timedelta(days=90)
+
+
 def article_index() -> dict[str, dict]:
     """Indexe les articles par leur URL publique exacte."""
     index = {}
@@ -70,10 +87,10 @@ def article_index() -> dict[str, dict]:
 
 
 def normalize_path(value: str) -> str:
-    if value.startswith("http://" ) or value.startswith("https://" ):
+    if value.startswith("http://") or value.startswith("https://"):
         value = urlparse(value).path
 
-    # GoatCounter peut renvoyer les caractères accentués encodés dans l’URL.
+    # GoatCounter peut renvoyer les caractères accentués encodés dans l'URL.
     value = unquote(value)
 
     if not value.startswith("/"):
@@ -90,13 +107,12 @@ def extract_hits(payload: dict) -> list[dict]:
     return hits
 
 
-def fetch_popular_articles(token: str, articles: dict[str, dict]) -> list[dict]:
-    now = datetime.now(timezone.utc).replace(
-    minute=0,
-    second=0,
-    microsecond=0,
-)
-    start = now - timedelta(days=30)
+def fetch_popular_articles(
+    token: str,
+    articles: dict[str, dict],
+    now: datetime,
+    start: datetime,
+) -> list[dict]:
     params = {
         "limit": LIMIT,
         "start": start.strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -130,24 +146,51 @@ def fetch_popular_articles(token: str, articles: dict[str, dict]) -> list[dict]:
         candidates.append(item)
 
     candidates.sort(key=lambda item: item["views"], reverse=True)
-    return candidates[:POPULAR_LIMIT]
+    popular = candidates[:POPULAR_LIMIT]
+
+    # Fallback : compléter avec les articles les plus récents si on n'a pas
+    # assez de données de vues pour atteindre POPULAR_LIMIT.
+    if len(popular) < POPULAR_LIMIT:
+        existing_urls = {a["url"] for a in popular}
+        for url, article in sorted(
+            articles.items(),
+            key=lambda x: x[1].get("date", ""),
+            reverse=True,
+        ):
+            if url not in existing_urls:
+                item = dict(article)
+                item["views"] = 0
+                popular.append(item)
+            if len(popular) >= POPULAR_LIMIT:
+                break
+
+    return popular
 
 
 def main() -> int:
     token = os.environ.get("GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE")
     if not token:
-        print("Erreur : GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE est absent.", file=sys.stderr)
+        print(
+            "Erreur : GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE est absent.",
+            file=sys.stderr,
+        )
         return 1
 
+    now = datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0)
+    start = get_last_update().replace(minute=0, second=0, microsecond=0)
+
+    print(f"Période de collecte : {start.date()} → {now.date()}")
+
     articles = article_index()
-    popular = fetch_popular_articles(token, articles)
+    popular = fetch_popular_articles(token, articles, now, start)
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(
         json.dumps(
             {
-                "generated_at": datetime.now(timezone.utc).isoformat(),
-                "period_days": 30,
+                "generated_at": now.isoformat(),
+                "period_start": start.isoformat(),
+                "period_days": (now - start).days,
                 "articles": popular,
             },
             ensure_ascii=False,
