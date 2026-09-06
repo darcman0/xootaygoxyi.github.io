@@ -83,12 +83,20 @@ def get_blog_title(filepath):
 
 
 def slugify_blog_title(title):
-    """Produit le slug utilisé par le plugin blog de Material for MkDocs."""
+    """Produit le slug exact utilisé par le plugin blog de Material for MkDocs."""
     import re
 
     slug = title.lower().strip()
-    slug = re.sub(r"[^\w\s-]", "", slug, flags=re.UNICODE)
-    slug = re.sub(r"[\s_-]+", "-", slug)
+    
+    # 1. Supprimer les apostrophes et guillemets (ex: l'ONU -> lonu)
+    slug = re.sub(r"['’\"”«»]", "", slug)
+    
+    # 2. Remplacer les espaces par des tirets
+    slug = re.sub(r"\s+", "-", slug)
+    
+    # 3. Supprimer les caractères spéciaux autres que lettres, chiffres, tirets et accents
+    slug = re.sub(r"[^\w-]", "", slug, flags=re.UNICODE)
+    
     return slug.strip("-")
 
 
