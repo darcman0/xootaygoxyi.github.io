@@ -20,10 +20,18 @@ POPULAR_LIMIT = 2
 
 
 def slugify(title: str) -> str:
-    """Reproduit le slug utilisé par Material pour les titres du blog."""
+    """Reproduit exactement le slug utilisé par Material et main.py."""
     slug = title.lower().strip()
-    slug = re.sub(r"[^\w\s-]", "", slug, flags=re.UNICODE)
-    slug = re.sub(r"[\s_-]+", "-", slug)
+    
+    # 1. Supprimer les apostrophes et guillemets (ex: l'ONU -> lonu)
+    slug = re.sub(r"['’\"”«»]", "", slug)
+    
+    # 2. Remplacer les espaces par des tirets
+    slug = re.sub(r"\s+", "-", slug)
+    
+    # 3. Supprimer les caractères spéciaux autres que lettres, chiffres, tirets et accents
+    slug = re.sub(r"[^\w-]", "", slug, flags=re.UNICODE)
+    
     return slug.strip("-")
 
 
@@ -49,8 +57,7 @@ def get_markdown_title(path: Path) -> str:
 def get_last_update() -> datetime:
     """
     Lit la date de la dernière génération dans le JSON existant.
-    Si le fichier est absent ou illisible, remonte 90 jours en arrière
-    pour couvrir toute la période de publication du blog.
+    Si le fichier est absent ou illisible, remonte 90 jours en arrière.
     """
     if not OUTPUT_FILE.exists():
         return datetime.now(timezone.utc) - timedelta(days=90)
@@ -73,7 +80,10 @@ def article_index() -> dict[str, dict]:
         if not title:
             continue
 
-        route = f"/blog/{slugify(str(title))}/"
+        # Utilise le slug du frontmatter si présent, sinon calcule le slug exact
+        slug = meta.get("slug") or slugify(str(title))
+        route = f"/blog/{slug}/"
+        
         index[route] = {
             "title": str(title),
             "url": route,
@@ -148,8 +158,7 @@ def fetch_popular_articles(
     candidates.sort(key=lambda item: item["views"], reverse=True)
     popular = candidates[:POPULAR_LIMIT]
 
-    # Fallback : compléter avec les articles les plus récents si on n'a pas
-    # assez de données de vues pour atteindre POPULAR_LIMIT.
+    # Fallback : compléter avec les articles les plus récents si pas assez de données
     if len(popular) < POPULAR_LIMIT:
         existing_urls = {a["url"] for a in popular}
         for url, article in sorted(
