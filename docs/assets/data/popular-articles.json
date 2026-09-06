@@ -4,17 +4,6 @@
   "period_days": 7,
   "articles": [
     {
-      "title": "Délimitation d'un bassin versant avec SAGA GIS depuis QGIS",
-      "url": "/blog/délimitation-dun-bassin-versant-avec-saga-gis-depuis-qgis/",
-      "image": "blog/assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png",
-      "date": "2026-06-07",
-      "categories": [
-        "Hydrologie",
-        "Tutoriels"
-      ],
-      "views": 1
-    },
-    {
       "title": "Equal Earth : le Togo ouvre un débat cartographique à l'ONU",
       "url": "/blog/equal-earth--le-togo-ouvre-un-débat-cartographique-à-lonu/",
       "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Equal-Earth-Map-150E.jpg",
@@ -24,7 +13,18 @@
         "Géopolitique",
         "SIG"
       ],
-      "views": 0
+      "views": 1
+    },
+    {
+      "title": "Délimitation d'un bassin versant avec SAGA GIS depuis QGIS",
+      "url": "/blog/délimitation-dun-bassin-versant-avec-saga-gis-depuis-qgis/",
+      "image": "blog/assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png",
+      "date": "2026-06-07",
+      "categories": [
+        "Hydrologie",
+        "Tutoriels"
+      ],
+      "views": 1
     }
   ]
 }
