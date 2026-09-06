@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T12:05:22.597104+00:00",
+  "generated_at": "2026-09-06T17:29:38.172113+00:00",
   "period_days": 30,
   "articles": [
     {
@@ -11,18 +11,7 @@
         "Hydrologie",
         "Tutoriels"
       ],
-      "views": 4
-    },
-    {
-      "title": "Connexion API Kobotoolbox vers Excel",
-      "url": "/blog/connexion-api-kobotoolbox-vers-excel/",
-      "image": "blog/assets/kobo_api_v1/article_presentation_img.jpg",
-      "date": "2026-05-29",
-      "categories": [
-        "Enquêtes",
-        "Synchronisation"
-      ],
-      "views": 1
+      "views": 5
     }
   ]
 }
