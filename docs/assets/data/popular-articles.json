@@ -1,8 +1,19 @@
 {
-  "generated_at": "2026-09-06T19:00:00+00:00",
-  "period_start": "2026-09-06T18:00:00+00:00",
-  "period_days": 0,
+  "generated_at": "2026-09-06T20:00:00+00:00",
+  "period_start": "2026-08-30T20:00:00+00:00",
+  "period_days": 7,
   "articles": [
+    {
+      "title": "Délimitation d'un bassin versant avec SAGA GIS depuis QGIS",
+      "url": "/blog/délimitation-dun-bassin-versant-avec-saga-gis-depuis-qgis/",
+      "image": "blog/assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png",
+      "date": "2026-06-07",
+      "categories": [
+        "Hydrologie",
+        "Tutoriels"
+      ],
+      "views": 1
+    },
     {
       "title": "Equal Earth : le Togo ouvre un débat cartographique à l'ONU",
       "url": "/blog/equal-earth--le-togo-ouvre-un-débat-cartographique-à-lonu/",
@@ -12,17 +23,6 @@
         "Cartographie",
         "Géopolitique",
         "SIG"
-      ],
-      "views": 0
-    },
-    {
-      "title": "Exporter des mises en page QGIS en PDF avec PyQGIS",
-      "url": "/blog/exporter-des-mises-en-page-qgis-en-pdf-avec-pyqgis/",
-      "image": "blog/assets/pyqgis_pdf_export/pyqgis.png",
-      "date": "2026-08-16",
-      "categories": [
-        "SIG",
-        "Python"
       ],
       "views": 0
     }
