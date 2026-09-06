@@ -92,6 +92,6 @@ description: "Découvrez mes articles techniques et retours d'expérience : prot
 
 <div style="text-align: center; margin: 2rem auto; padding: 0 1rem;" markdown="1">
 
-[:material-rss: S'abonner au flux RSS](../feed_rss_created.xml){ .md-button .md-button--outline }
+[:material-rss: S'abonner au flux RSS](https://xootaygoxyi.com/feed_rss_created.xml){ .md-button .md-button--outline }
 
 </div>
