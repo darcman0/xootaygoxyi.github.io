@@ -1,7 +1,7 @@
 ---
 date:
   created: 2026-09-05
-image: blog\assets\resolution_togo_onu/Equal-Earth-Map-150E.jpg
+image: https://upload.wikimedia.org/wikipedia/commons/c/cd/Equal-Earth-Map-150E.jpg
 authors:
   - darc
 categories:
