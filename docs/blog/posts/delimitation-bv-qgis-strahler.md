@@ -1,6 +1,7 @@
 ---
 date:
   created: 2026-06-07
+  updated: 2026-09-07
 image: blog/assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png
 authors:
   - darc
@@ -73,7 +74,8 @@ La version **LTR (Long Term Release)** de QGIS est la version stable recommandé
 Une fois activé, les outils SAGA sont accessibles depuis **Traitement → Boîte à outils → SAGA NextGen**.
 
 !!! warning "SAGA non détecté ?"
-    Si les outils SAGA n'apparaissent pas après activation du plugin, installer SAGA GIS séparément depuis **saga-gis.org** et configurer le chemin dans **Préférences → Options → Traitement → Fournisseurs de traitements → SAGA**.
+    Si les outils SAGA n'apparaissent pas après activation du plugin, Télécharger SAGA GIS séparément depuis **saga-gis.org** et configurer le chemin dans **Préférences → Options → Traitement → Fournisseurs de traitements → SAGA**. C'est le dossier de **Saga** qu'il faut renseigner.
+    ![](../assets/delimitation-bv-qgis-strahler/saga_qgis_folder_config.png){ .img-center }
 
 ## Données utilisées
 
