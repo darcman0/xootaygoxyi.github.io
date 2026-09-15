@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-07T23:00:00+00:00",
-  "period_start": "2026-08-31T23:00:00+00:00",
+  "generated_at": "2026-09-15T10:00:00+00:00",
+  "period_start": "2026-09-08T10:00:00+00:00",
   "period_days": 7,
   "articles": [
     {
@@ -13,18 +13,18 @@
         "Géopolitique",
         "SIG"
       ],
-      "views": 1
+      "views": 0
     },
     {
-      "title": "Délimitation d'un bassin versant avec SAGA GIS depuis QGIS",
-      "url": "/blog/délimitation-dun-bassin-versant-avec-saga-gis-depuis-qgis/",
-      "image": "blog/assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png",
-      "date": "2026-06-07",
+      "title": "Exporter des mises en page QGIS en PDF avec PyQGIS",
+      "url": "/blog/exporter-des-mises-en-page-qgis-en-pdf-avec-pyqgis/",
+      "image": "blog/assets/pyqgis_pdf_export/pyqgis.png",
+      "date": "2026-08-16",
       "categories": [
-        "Hydrologie",
-        "Tutoriels"
+        "SIG",
+        "Python"
       ],
-      "views": 1
+      "views": 0
     }
   ]
 }
