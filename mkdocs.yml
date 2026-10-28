@@ -46,6 +46,7 @@ extra_css:
 
 extra_javascript:
   - assets/js/custom.js
+  - assets/js/newsletter.js
 
 markdown_extensions:
   - md_in_html

@@ -38,38 +38,6 @@ description: "Découvrez mes articles techniques et retours d'expérience : prot
 </form>
 <div class="nl-msg" role="status" aria-live="polite"></div>
 <p class="nl-note">En vous inscrivant, vous acceptez de recevoir les nouveaux articles par email. Un email de confirmation vous sera envoyé, et vous pouvez vous désinscrire à tout moment.</p>
-<script>
-document.addEventListener('submit',function(e){
-var f=e.target;
-if(!f.classList||!f.classList.contains('nl-form')){return;}
-e.preventDefault();
-var CHECK='https://newsletter-check-xgy.darcman8.workers.dev';
-var m=f.parentNode.querySelector('.nl-msg'),b=f.querySelector('button');
-function show(ok,t){m.className='nl-msg '+(ok?'ok':'ko');m.textContent=t;}
-function send(){
-return fetch(f.action,{method:'POST',body:new FormData(f),redirect:'manual',headers:{'Accept':'application/json'}})
-.then(function(r){
-if(r.type==='opaqueredirect'){return true;}
-return r.json().then(function(d){return r.ok&&d.success!==false;},function(){return r.ok;});
-})
-.then(function(ok){
-if(ok){show(true,"Merci ! Un email vient de vous être envoyé. Cliquez sur le lien qu'il contient pour confirmer votre inscription (pensez à vérifier vos spams).");f.reset();}
-else{show(false,"Nous n'avons pas pu enregistrer votre inscription. Vérifiez l'adresse email et réessayez.");}
-})
-.catch(function(){show(true,"Demande envoyée. Si vous ne recevez aucun email dans quelques minutes, vérifiez vos spams ou réessayez.");});
-}
-b.disabled=true;
-var email=f.querySelector('input[name=EMAIL]').value;
-fetch(CHECK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})})
-.then(function(r){return r.json();})
-.then(function(d){
-if(d.status==='already'){show(true,"Cette adresse est déjà inscrite à la newsletter. Vous n'avez rien à faire.");f.reset();return;}
-return send();
-})
-.catch(function(){return send();})
-.then(function(){setTimeout(function(){b.disabled=false;},5000);});
-});
-</script>
 </div>
 
 <div style="text-align: center; margin: 2rem auto; padding: 0 1rem;" markdown="1">
