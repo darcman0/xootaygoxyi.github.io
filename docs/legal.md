@@ -47,4 +47,4 @@ Conformément au **Règlement général sur la protection des données (RGPD)**,
 
 ---
 
-Dernière mise à jour : août 2026
+Dernière mise à jour : octobre 2026
