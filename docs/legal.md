@@ -22,8 +22,8 @@ Le site est déployé sur [GitHub Pages](https://pages.github.com) (GitHub Inc.,
 
 ### Newsletter
 
-L’inscription à la newsletter est gérée par [Brevo](https://www.brevo.com ). L’adresse email est utilisée pour envoyer les nouveaux articles et les messages liés à l’inscription. L’inscription repose sur une confirmation par email, et chaque message contient un moyen de se désabonner.  
-[Politique de confidentialité de Brevo](https://www.brevo.com/legal/privacypolicy/ )
+L’inscription à la newsletter est gérée par [Brevo](https://www.brevo.com). L’adresse email est utilisée pour envoyer les nouveaux articles et les messages liés à l’inscription. L’inscription repose sur une confirmation par email, et chaque message contient un moyen de se désabonner.  
+[Politique de confidentialité de Brevo](https://www.brevo.com/legal/privacypolicy/)
 
 
 ### Commentaires
