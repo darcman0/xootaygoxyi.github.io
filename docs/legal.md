@@ -11,7 +11,7 @@ hide:
 ## Éditeur
 
 Ce site est publié par **Abdou Aziz Darc**, géomaticien freelance et télépilote drone, exerçant au Sénégal.  
-Contact : [darcman8@gmail.com](mailto:darcman8@gmail.com)  
+Contact : [contact@xootaygoxyi.com](mailto:contact@xootaygoxyi.com)
 Site web : [xootaygoxyi.com](https://xootaygoxyi.com)
 
 ## Hébergement et infrastructure
