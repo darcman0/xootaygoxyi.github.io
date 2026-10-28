@@ -5,89 +5,71 @@ description: "Découvrez mes articles techniques et retours d'expérience : prot
 
 # Blog
 
-### Bienvenue sur _Chroniques Spatiales_  le blog de **Xootay Gox Yi**. J’y partage des tutoriels, des retours de terrain et des méthodes de traitement de données en géomatique. Certains articles sont aussi écrits avec d’autres professionnels, à partir de projets et d’échanges techniques.
-
+### Bienvenue sur _Chroniques Géospatiales_, le blog de **Xootay Gox Yi**. J’y partage des tutoriels, des retours de terrain et des méthodes de traitement de données en géomatique. Certains articles sont aussi écrits avec d’autres professionnels, à partir de projets et d’échanges techniques.
 
 ---
-<div class="followit-wrapper">
+
+<div class="nl-box">
 <style>
-.followit-wrapper {
-  max-width: 480px;
-  margin: 1.5rem auto;
-  padding: 0 1rem;
-}
-.followit-wrapper form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.followit-wrapper h5 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  color: var(--md-default-fg-color);
-  font-family: var(--md-text-font-family);
-}
-.followit-wrapper input[type="email"] {
-  width: 100%;
-  height: 42px;
-  border-radius: 6px;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  background: var(--md-code-bg-color);
-  color: var(--md-default-fg-color);
-  font-family: var(--md-text-font-family);
-  font-size: 0.9rem;
-  padding: 0 1rem;
-  outline: none;
-  box-sizing: border-box;
-  transition: border-color 0.2s;
-}
-.followit-wrapper input[type="email"]:focus {
-  border-color: var(--md-primary-fg-color);
-}
-.followit-wrapper input[type="email"]::placeholder {
-  color: var(--md-default-fg-color--light);
-}
-.followit-wrapper button[type="submit"] {
-  width: 100%;
-  height: 42px;
-  border: none;
-  border-radius: 6px;
-  background: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
-  font-family: var(--md-text-font-family);
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-.followit-wrapper button[type="submit"]:hover {
-  opacity: 0.85;
-}
-.followit-powered {
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--md-default-fg-color--light);
-  margin-top: 6px;
-}
-.followit-powered a {
-  color: var(--md-default-fg-color--light);
-  text-decoration: none;
-}
+.nl-box{max-width:540px;margin:1.5rem auto;padding:1.25rem;border:1px solid var(--md-default-fg-color--lightest);border-radius:.4rem;background:var(--md-code-bg-color);box-sizing:border-box}
+.nl-box *{box-sizing:border-box}
+.nl-box h5{margin:0 0 .4rem 0;font-size:1.05rem;font-weight:700;color:var(--md-default-fg-color)}
+.nl-box p{margin:0 0 .9rem 0;font-size:.85rem;color:var(--md-default-fg-color--light)}
+.nl-box form{display:flex;gap:.5rem;flex-wrap:wrap}
+.nl-box input[type=email]{flex:1 1 220px;min-width:0;padding:.65rem .8rem;font-size:16px;font-family:inherit;color:var(--md-default-fg-color);background:var(--md-default-bg-color);border:1px solid var(--md-default-fg-color--lighter);border-radius:.3rem}
+.nl-box input[type=email]:focus{outline:2px solid var(--md-accent-fg-color);outline-offset:0}
+.nl-box button{flex:0 0 auto;padding:.65rem 1.2rem;font-size:.9rem;font-weight:700;font-family:inherit;cursor:pointer;color:var(--md-primary-bg-color);background:var(--md-primary-fg-color);border:0;border-radius:.3rem}
+.nl-box button:hover{background:var(--md-accent-fg-color)}
+.nl-box button:disabled{opacity:.6;cursor:wait}
+.nl-box .nl-note{margin:.7rem 0 0 0;font-size:.75rem}
+.nl-box .nl-msg{display:none;margin:.8rem 0 0 0;padding:.65rem .8rem;font-size:.85rem;border-left:4px solid;border-radius:.3rem;color:var(--md-default-fg-color)}
+.nl-box .nl-msg.ok{display:block;border-color:#13ce66;background:rgba(19,206,102,.15)}
+.nl-box .nl-msg.ko{display:block;border-color:#ff4949;background:rgba(255,73,73,.15)}
+.nl-hidden{display:none!important}
+@media (max-width:480px){.nl-box button{width:100%}}
 </style>
-
-<form action="https://api.follow.it/subscription-form/bmV4Tm1wWUVlUlZRQ1ZJdmxrU28rc1hiRytFMGp1SWUxR3dDaTBxakwyZGRPMG91QlBqRFJiczdtOXhBVVJsL2FHelM2ZUtFVFRRaXRSUm81akQycGh5S0g3U2N5YVhYSlJ3Y3hjRU1JanlSMkFtSjhzelE1b2YzVHFLZTFaR1N8WjN0ZXFjbFBnZVRzZWdpMXp4a0o5WGlEaHhqZXlwK253V1VZOWdGM1Bobz0=/8" method="post">
-  <h5>Recevoir les nouveaux articles par email</h5>
-  <input type="email" name="email" required placeholder="Votre adresse email" spellcheck="false" autocomplete="email" >
-  <button type="submit">S'abonner</button>
+<h5>Recevoir les nouveaux articles par email</h5>
+<p>Un email à chaque nouvel article : tutoriels, retours de terrain et méthodes de géomatique.</p>
+<form class="nl-form" method="POST" action="https://ef24d06a.sibforms.com/serve/MUIFAB-wLrz8VNhBUf6MpQ70Hs0PfwlcoiQaKEdX_HL4F2BUPTTSmIA0TX4R257mTo2a0_PBucgt0VURLdfmNodWnkHSW4ITk05G5YzcplOQMpKLeZqOd1oOGBZQE-G7zs4wGXNnhvOp6rXhu9Jyt55axYdKiLp3z9nHKqYzkPBzLQvbK0uio0Xu8KEtyfbD5JawQRpyrh3uGmE64Q==">
+<input type="email" name="EMAIL" placeholder="votre@email.com" aria-label="Adresse email" required autocomplete="email">
+<input type="text" name="email_address_check" value="" class="nl-hidden" tabindex="-1" autocomplete="off">
+<input type="hidden" name="locale" value="fr">
+<button type="submit">S'inscrire</button>
 </form>
-
-<p class="followit-powered">
-  Propulsé par <a href="https://follow.it" target="_blank" rel="noopener noreferrer">follow.it</a>
-
-</p>
-
+<div class="nl-msg" role="status" aria-live="polite"></div>
+<p class="nl-note">En vous inscrivant, vous acceptez de recevoir les nouveaux articles par email. Un email de confirmation vous sera envoyé, et vous pouvez vous désinscrire à tout moment.</p>
+<script>
+document.addEventListener('submit',function(e){
+var f=e.target;
+if(!f.classList||!f.classList.contains('nl-form')){return;}
+e.preventDefault();
+var CHECK='https://newsletter-check-xgy.darcman8.workers.dev';
+var m=f.parentNode.querySelector('.nl-msg'),b=f.querySelector('button');
+function show(ok,t){m.className='nl-msg '+(ok?'ok':'ko');m.textContent=t;}
+function send(){
+return fetch(f.action,{method:'POST',body:new FormData(f),redirect:'manual',headers:{'Accept':'application/json'}})
+.then(function(r){
+if(r.type==='opaqueredirect'){return true;}
+return r.json().then(function(d){return r.ok&&d.success!==false;},function(){return r.ok;});
+})
+.then(function(ok){
+if(ok){show(true,"Merci ! Un email vient de vous être envoyé. Cliquez sur le lien qu'il contient pour confirmer votre inscription (pensez à vérifier vos spams).");f.reset();}
+else{show(false,"Nous n'avons pas pu enregistrer votre inscription. Vérifiez l'adresse email et réessayez.");}
+})
+.catch(function(){show(true,"Demande envoyée. Si vous ne recevez aucun email dans quelques minutes, vérifiez vos spams ou réessayez.");});
+}
+b.disabled=true;
+var email=f.querySelector('input[name=EMAIL]').value;
+fetch(CHECK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})})
+.then(function(r){return r.json();})
+.then(function(d){
+if(d.status==='already'){show(true,"Cette adresse est déjà inscrite à la newsletter. Vous n'avez rien à faire.");f.reset();return;}
+return send();
+})
+.catch(function(){return send();})
+.then(function(){setTimeout(function(){b.disabled=false;},5000);});
+});
+</script>
 </div>
 
 <div style="text-align: center; margin: 2rem auto; padding: 0 1rem;" markdown="1">

@@ -1,6 +1,6 @@
 ---
 title: "Mentions légales | Xootay Gox Yi - Abdou Aziz Darc"
-description: "Informations légales, hébergement et politique de confidentialité du site Xootay Gox Yi. Données collectées par Giscus, GoatCounter et Formspree."
+description: "Informations légales, hébergement et politique de confidentialité du site Xootay Gox Yi. Données collectées par Giscus, GoatCounter, Formspree et Brevo."
 hide:
   - navigation
   - toc
@@ -19,6 +19,12 @@ Site web : [xootaygoxyi.com](https://xootaygoxyi.com)
 Le site est déployé sur [GitHub Pages](https://pages.github.com) (GitHub Inc., San Francisco, États-Unis). La distribution du contenu et la sécurisation des connexions sont assurées par le réseau [Cloudflare](https://www.cloudflare.com) (Cloudflare Inc., San Francisco, États-Unis).
 
 ## Traitement des données
+
+### Newsletter
+
+L’inscription à la newsletter est gérée par [Brevo](https://www.brevo.com ). L’adresse email est utilisée pour envoyer les nouveaux articles et les messages liés à l’inscription. L’inscription repose sur une confirmation par email, et chaque message contient un moyen de se désabonner.  
+[Politique de confidentialité de Brevo](https://www.brevo.com/legal/privacypolicy/ )
+
 
 ### Commentaires
 
