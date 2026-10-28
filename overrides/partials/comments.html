@@ -1,4 +1,19 @@
-{% if page.meta.comments != false and "blog/" in page.url %}
+{% if page.meta.comments != false and "blog/" in page.url and page.url != "blog/" %}
+
+<section class="newsletter-cta">
+  <h2>Recevoir les prochains articles</h2>
+  <p>
+    Vous souhaitez recevoir les prochains tutoriels, retours de terrain
+    et méthodes de géomatique par email ?
+  </p>
+  <a
+    class="md-button md-button--primary"
+    href="https://xootaygoxyi.com/blog/#newsletter"
+  >
+    S'inscrire à la newsletter
+  </a>
+</section>
+
 <h2 id="commentaires">Commentaires</h2>
 
 <script src="https://giscus.app/client.js"

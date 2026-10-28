@@ -462,3 +462,24 @@
     transform: none;
   }
 }
+/* Appel newsletter automatique sous les articles */
+.newsletter-cta {
+  margin: 2.5rem 0 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+  background: var(--md-code-bg-color);
+}
+
+.newsletter-cta h2 {
+  margin-top: 0;
+}
+
+.newsletter-cta p {
+  margin-bottom: 1rem;
+}
+
+.newsletter-cta .md-button {
+  display: table;
+  margin: 1rem auto 0;
+}

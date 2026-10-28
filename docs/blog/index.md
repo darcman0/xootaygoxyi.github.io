@@ -9,7 +9,7 @@ description: "Découvrez mes articles techniques et retours d'expérience : prot
 
 ---
 
-<div class="nl-box">
+<div class="nl-box" id="newsletter">
 <style>
 .nl-box{max-width:540px;margin:1.5rem auto;padding:1.25rem;border:1px solid var(--md-default-fg-color--lightest);border-radius:.4rem;background:var(--md-code-bg-color);box-sizing:border-box}
 .nl-box *{box-sizing:border-box}

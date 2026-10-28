@@ -46,7 +46,7 @@ description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée
 ---
 ## Derniers articles
 
-Retrouve les derniers tutoriels, retours d'expérience et analyses consacrés à la géomatique, au SIG, au drone et à la programmation.
+Retrouvez les derniers tutoriels, retours d'expérience et analyses consacrés à la géomatique, au SIG, au drone et à la programmation.
 
 {{ render_latest_posts(3) }}
 

@@ -20,7 +20,7 @@ Une mission, une collaboration, une question sur ce que vous avez trouvé ici. J
 
 [Visiter mon Gitlab :fontawesome-brands-gitlab:](https://gitlab.com/darcman0){ .md-button .md-button }
 
-[Me retrouver sur Linkedin :fontawesome-brands-linkedin:](https://linkedin.com/in/abdou-aziz-darc){ .md-button .md-button }
+[Me retrouver sur LinkedIn :fontawesome-brands-linkedin:](https://www.linkedin.com/in/abdou-aziz-darc-678478169/ ){ .md-button .md-button}
 
 </div>
 
@@ -28,7 +28,7 @@ Une mission, une collaboration, une question sur ce que vous avez trouvé ici. J
 
 ## Ou envoyer un message direct
 
-Si tu préfères passer par le formulaire ci-dessous, je reçois la notification et je te réponds dès que possible.
+Si vous préférez passer par le formulaire ci-dessous, je recevrai votre message et vous répondrai dès que possible.
 
 <form action="https://formspree.io/f/xrpzypgg" method="POST" class="contact-form" id="contactForm" autocomplete="on">
   
@@ -38,21 +38,21 @@ Si tu préfères passer par le formulaire ci-dessous, je reçois la notification
   <div class="form-row">
     <div class="form-group">
       <label for="prenom">Prénom</label>
-      <input type="text" name="prenom" id="prenom" required placeholder="Ton prénom" autocomplete="given-name" >
+      <input type="text" name="prenom" id="prenom" required placeholder="Votre prénom" autocomplete="given-name" >
     </div>
     <div class="form-group">
       <label for="nom">Nom</label>
-      <input type="text" name="nom" id="nom" required placeholder="Ton nom" autocomplete="family-name">
+      <input type="text" name="nom" id="nom" required placeholder="Votre nom" autocomplete="family-name">
     </div>
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" name="email" id="email" required placeholder="ton@email.com" autocomplete="email">
+    <input type="email" name="email" id="email" required placeholder="Votre@email.com" autocomplete="email">
     <small id="email-error" style="color: #e53935; display: none; margin-top: 0.3rem; font-size: 0.85rem;">Veuillez entrer une adresse email valide (ex: nom@domaine.com).</small>
   </div>
   <div class="form-group">
     <label for="message">Message</label>
-    <textarea name="message" id="message" rows="8" required placeholder="Ton message ici..."></textarea>
+    <textarea name="message" id="message" rows="8" required placeholder="Votre message ici..."></textarea>
   </div>
   <button type="submit" class="md-button md-button">Envoyer</button>
 </form>

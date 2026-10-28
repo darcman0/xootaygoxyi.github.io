@@ -1,5 +1,6 @@
 # docs/blog/.authors.yml
-# Ce fichier définit ton profil auteur pour tous les articles du blog
+# Ce fichier définit le profil auteur pour tous les articles du blog.
+
 authors:
   darc:
     name: Abdou Aziz Darc

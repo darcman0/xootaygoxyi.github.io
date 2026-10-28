@@ -18,7 +18,7 @@ tags:
 description: "Tutoriel pour connecter l'API V1 de KoboToolbox à Excel, automatiser l'import des données de terrain et éviter les exports manuels répétitifs."
 
 ---
-# Connexion de l'API V1 de Kobotoolbox avec Microsoft Excel
+# Importer des données KoboToolbox dans Excel avec l'API V1
 
 ![Illustration](../assets/kobo_api_v1/article_presentation_img.jpg){.img-center}
 

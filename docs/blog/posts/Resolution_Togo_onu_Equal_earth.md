@@ -21,7 +21,7 @@ description: "La résolution portée par le Togo à l'ONU remet Equal Earth et l
 
 ---
 
-# Le Togo porte à l'ONU une nouvelle bataille cartographique autour d'Equal Earth
+# Equal Earth : le Togo ouvre un débat cartographique à l'ONU
 
 ![Carte mondiale Equal Earth](https://upload.wikimedia.org/wikipedia/commons/c/cd/Equal-Earth-Map-150E.jpg){ .img-center }
 *Carte mondiale politique en projection Equal Earth. Auteur : Tom Patterson, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Equal-Earth-Map-150E.jpg), image placée dans le domaine public.*

@@ -5,7 +5,7 @@ date:
 image: https://assets.xootaygoxyi.com/assets/blog/mangroves_we_forest_terrain/DJI_20250711100605_0001_V.webp
 authors:
   - darc
-title: "Cartographie drone de 7 000 ha de mangroves au Sénégal"
+title: "Cartographier près de 7 000 ha de mangroves pour WeForest au Sénégal : retour de terrain"
 categories:
   - Terrain
   - Drone
@@ -18,10 +18,10 @@ description: "Retour de terrain sur une cartographie drone de 7 000 hectares de 
 ---
 
 
-# Cartographier près de 7 000 ha de mangroves pour WeForest : retour de terrain
+# Cartographier près de 7 000 ha de mangroves pour WeForest au Sénégal : retour de terrain
 
 
-Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne d'environ 7 000 hectares de reboisements de mangrove dans les îles du Sine-Saloum et en Casamance pour le compte de WeForest, via Earth Géomatique. 750 sites, plusieurs types de drones, des conditions de terrain extrêmes. Voici ce que j'en retiens.
+Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne d'environ 7 000 hectares de reboisements de mangrove dans les îles du Sine-Saloum et en Casamance pour le compte de WeForest, via Earth Géomatique. Le projet portait sur 750 sites, avec plusieurs types de drones et des conditions de terrain parfois difficiles. Voici ce que j'en retiens.
 
 ![Vue aérienne d'un site de mangrove pris par drone](https://assets.xootaygoxyi.com/assets/blog/mangroves_we_forest_terrain/DJI_20250711100605_0001_V.webp){ .img-center }
 
@@ -38,7 +38,7 @@ Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne
 | Surface totale | ~7 000 ha |
 | Nombre de sites | 750 |
 | Résolution orthophoto | 2 cm |
-| Drones utilisés | DJI Air 2s, Mavic 3 Entreprise, Mavic 3 Mini Pro |
+| Drones utilisés | DJI Air 2s, Mavic 3 Entreprise, DJI Mini 3 Pro |
 | Planification de vol | Mission Planner |
 | Outil de suivi terrain | QField |
 | Logiciel de traitement | Agisoft Metashape Professional |
@@ -50,7 +50,7 @@ Entre juillet 2025 et janvier 2026, j'ai participé à la cartographie aérienne
 
 ### Accessibilité des sites
 
-Le Sine-Saloum est un archipel de bolongs, de chenaux et de mangroves denses. Certains sites ne sont accessibles qu'en pirogue, avec du matériel drone à protéger de l'humidité et des éclaboussures. À cela s'ajoutait une contrainte propre à l'objet cartographié : sur l'ensemble des 750 sites (300 environs été localisé dans le Sine-Saloum), les jeunes pousses de mangrove devaient être visibles et non recouvertes d'eau au moment du vol, ce qui imposait de ne travailler qu'en marée basse.
+Le Sine-Saloum est un archipel de bolongs, de chenaux et de mangroves denses. Certains sites ne sont accessibles qu'en pirogue, avec du matériel drone à protéger de l'humidité et des éclaboussures. À cela s'ajoutait une contrainte propre à l'objet cartographié : sur l'ensemble des 750 sites, dont environ 300 ont été localisés dans le Sine-Saloum, les jeunes pousses de mangrove devaient être visibles et non recouvertes d'eau au moment du vol, ce qui imposait de ne travailler qu'en marée basse.
 
 **Solution :** Sacs de protection pour les batteries et les télécommandes, certains étanches et d'autres non, mais les batteries étaient systématiquement mises en sécurité dans ces sacs. Chaque mission était calée sur les horaires de marée basse du site, avec en plus une contrainte de lumière : on cherchait à toujours voler en présence de soleil, donc on débutait très tôt et on terminait bien avant le coucher du soleil, le tout en restant dans la fenêtre de marée basse disponible.
 
@@ -80,7 +80,7 @@ Les plans de vol ont été préparés avec Mission Planner, en tenant compte des
 QField a été central dans la gestion de la mission. Voici notre workflow :
 
 1. **Préparation dans QGIS** : Pour les 300 sites, avec attributs (ID site, surface estimée, statut, date prévue, commentaires)
-2. **Synchronisation sur QField** : chaque télépilote pouvait renseigner les sites qu'il a survoler et voir ce qui on déja été survolée à partir de son téléphone en temps réelle
+2. **Synchronisation sur QField** : chaque télépilote pouvait renseigner les sites qu'il avait survolés et voir ceux qui avaient déjà été survolés depuis son téléphone, en temps réel
 3. **Sur le terrain** : remplissage du statut (volé / à re-voler / problème technique), ajout de photos géolocalisées
 4. **Chaque soir** : traitement de toutes les images de la journée et export des orthophotos, pour repérer rapidement les sites à re-voler avant de quitter la zone
 5. **Synchronisation en fin de journée** : mise à jour de la base centrale via QFieldCloud
@@ -99,7 +99,7 @@ Appliqué via le batch processing de Metashape sur des dossiers organisés par s
 
 ## Ce que j'ai appris
 
-!!! success "Ce qui a bien fonctionné "
+!!! success "Ce qui a bien fonctionné"
     - QField pour le suivi en temps réel des 300 sites : indispensable
     - Caler chaque vol sur la marée basse tout en restant dans la fenêtre de soleil : lumière rasante, mangroves encore humides donc contraste maximal
     - Recouvrement frontal/latéral à 80%/70% : moins de trous dans les zones denses
