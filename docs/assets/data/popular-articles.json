@@ -1,19 +1,8 @@
 {
-  "generated_at": "2026-10-28T15:00:00+00:00",
-  "period_start": "2026-10-21T15:00:00+00:00",
+  "generated_at": "2026-11-01T12:00:00+00:00",
+  "period_start": "2026-10-25T12:00:00+00:00",
   "period_days": 7,
   "articles": [
-    {
-      "title": "Importer des données KoboToolbox dans Excel avec l'API V1",
-      "url": "/blog/importer-des-données-kobotoolbox-dans-excel-avec-lapi-v1/",
-      "image": "blog/assets/kobo_api_v1/article_presentation_img.jpg",
-      "date": "2026-05-29",
-      "categories": [
-        "Enquêtes",
-        "Terrain"
-      ],
-      "views": 3
-    },
     {
       "title": "Délimitation d'un bassin versant avec SAGA GIS depuis QGIS",
       "url": "/blog/délimitation-dun-bassin-versant-avec-saga-gis-depuis-qgis/",
@@ -23,7 +12,18 @@
         "Hydrologie",
         "Tutoriels"
       ],
-      "views": 2
+      "views": 4
+    },
+    {
+      "title": "Importer des données KoboToolbox dans Excel avec l'API V1",
+      "url": "/blog/importer-des-données-kobotoolbox-dans-excel-avec-lapi-v1/",
+      "image": "blog/assets/kobo_api_v1/article_presentation_img.jpg",
+      "date": "2026-05-29",
+      "categories": [
+        "Enquêtes",
+        "Terrain"
+      ],
+      "views": 1
     }
   ]
 }
