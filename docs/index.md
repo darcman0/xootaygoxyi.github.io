@@ -40,14 +40,6 @@ description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée
 
     [Voir les publications :material-arrow-right:](publications.md){ .md-button }
 
--   :fontawesome-brands-youtube:{ .lg .middle } **Dr SIG sur YouTube**
-
-    ---
-
-    Des tutoriels vidéo en géomatique, pour suivre les manipulations pas à pas.
-
-    [Voir la chaîne :material-arrow-right:](https://www.youtube.com/@drsig8){ .md-button }
-
 
 </div>
 
