@@ -4,4 +4,22 @@
   {{ super() }}
   <script data-goatcounter="https://darcman0.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
+  {% if page and page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdou Aziz Darc",
+    "url": "https://xootaygoxyi.com/",
+    "jobTitle": "Géomaticien, géographe et télépilote drone",
+    "image": "https://xootaygoxyi.com/assets/images/profile.jpg",
+    "sameAs": [
+      "https://www.youtube.com/@drsig8",
+      "https://www.linkedin.com/in/abdou-aziz-darc-678478169/",
+      "https://github.com/darcman0",
+      "https://gitlab.com/darcman0"
+    ]
+  }
+  </script>
+  {% endif %}
 {% endblock %}

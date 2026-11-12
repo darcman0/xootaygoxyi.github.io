@@ -3,7 +3,7 @@ hide:
   - toc
   - navigation
 title: "Xootay Gox Yi | Contact & Collaborations - Abdou Aziz Darc"
-description: "Une mission, un levé drone ou un projet SIG au Sénégal ou ailleurs ? Retrouvez mes canaux de contact professionnels, GitHub, LinkedIn."
+description: "Une mission, un levé drone ou un projet SIG au Sénégal ou ailleurs ? Retrouvez mes canaux de contact professionnels, GitHub, LinkedIn et YouTube."
 ---
 
 # Contact
@@ -21,6 +21,8 @@ Une mission, une collaboration, une question sur ce que vous avez trouvé ici. J
 [Visiter mon Gitlab :fontawesome-brands-gitlab:](https://gitlab.com/darcman0){ .md-button .md-button }
 
 [Me retrouver sur LinkedIn :fontawesome-brands-linkedin:](https://www.linkedin.com/in/abdou-aziz-darc-678478169/ ){ .md-button .md-button}
+
+[Suivre Dr SIG sur YouTube :fontawesome-brands-youtube:](https://www.youtube.com/@drsig8){ .md-button .md-button }
 
 </div>
 
