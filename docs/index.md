@@ -40,6 +40,14 @@ description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée
 
     [Voir les publications :material-arrow-right:](publications.md){ .md-button }
 
+-   :fontawesome-brands-youtube:{ .lg .middle } **Dr SIG sur YouTube**
+
+    ---
+
+    Des tutoriels vidéo en géomatique, pour suivre les manipulations pas à pas.
+
+    [Voir la chaîne :material-arrow-right:](https://www.youtube.com/@drsig8){ .md-button }
+
 
 </div>
 
@@ -74,6 +82,8 @@ J’explore les territoires à travers la cartographie, l’analyse spatiale, la
 Je défends une approche ouverte de la géomatique, fondée autant que possible sur les logiciels libres, les données accessibles et le partage des méthodes. Cette démarche permet de mieux comprendre les outils, de favoriser l’autonomie et de construire des solutions reproductibles.
 
 Ce site rassemble mes retours d’expérience, mes analyses et les ressources que je souhaite rendre utiles aux professionnels, aux étudiants et à toute personne intéressée par la géomatique.
+
+En complément, la chaîne YouTube [Dr SIG](https://www.youtube.com/@drsig8) propose la version vidéo de ce travail : on y voit les outils en action, étape par étape.
 
 
 </div>
