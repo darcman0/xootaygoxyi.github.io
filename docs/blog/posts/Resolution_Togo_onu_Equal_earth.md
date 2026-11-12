@@ -1,4 +1,5 @@
 ---
+slug: equal-earth-togo-onu
 date:
   created: 2026-09-05
 image: https://upload.wikimedia.org/wikipedia/commons/c/cd/Equal-Earth-Map-150E.jpg

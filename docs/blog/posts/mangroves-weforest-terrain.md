@@ -1,4 +1,5 @@
 ---
+slug: mangroves-weforest-retour-terrain
 date:
   created: 2025-08-10
   updated: 2026-08-16

@@ -101,6 +101,14 @@ plugins:
       archive_pagination_per_page: 10
       categories_pagination_per_page: 10
 
+  - redirects:
+      redirect_maps:
+        "blog/equal-earth--le-togo-ouvre-un-débat-cartographique-à-lonu/index.md": "blog/posts/Resolution_Togo_onu_Equal_earth.md"
+        "blog/importer-des-données-kobotoolbox-dans-excel-avec-lapi-v1/index.md": "blog/posts/article_kobo.md"
+        "blog/délimitation-dun-bassin-versant-avec-saga-gis-depuis-qgis/index.md": "blog/posts/delimitation-bv-qgis-strahler.md"
+        "blog/cartographier-près-de-7-000-ha-de-mangroves-pour-weforest-au-sénégal--retour-de-terrain/index.md": "blog/posts/mangroves-weforest-terrain.md"
+        "blog/exporter-des-mises-en-page-qgis-en-pdf-avec-pyqgis/index.md": "blog/posts/pyqgis-pdf-export.md"
+
   - rss:
       match_path: blog/posts/.*
       date_from_meta:

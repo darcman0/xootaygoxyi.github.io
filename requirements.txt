@@ -7,3 +7,4 @@ mkdocs-glightbox==0.5.3
 PyYAML==6.0.3
 nbformat==5.11.1
 requests==2.34.2
+mkdocs-redirects==1.2.2

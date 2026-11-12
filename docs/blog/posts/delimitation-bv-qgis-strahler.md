@@ -1,4 +1,5 @@
 ---
+slug: bassin-versant-saga-gis-qgis
 date:
   created: 2026-06-07
   updated: 2026-09-07

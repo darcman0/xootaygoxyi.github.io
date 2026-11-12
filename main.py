@@ -131,7 +131,7 @@ def get_latest_blog_posts(docs_dir, limit=3):
             "description": meta.get("description", ""),
             "categories": meta.get("categories", []),
             "date": str(date),
-            "url": f"blog/{slugify_blog_title(title)}/",
+            "url": f"blog/{meta.get('slug') or slugify_blog_title(title)}/",
         })
 
     posts.sort(key=lambda post: post["date"], reverse=True)
