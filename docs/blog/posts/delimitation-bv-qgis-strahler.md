@@ -22,7 +22,7 @@ description: "Délimiter un bassin versant avec SAGA GIS depuis QGIS : installat
 
 # Délimitation d'un bassin versant avec SAGA GIS depuis QGIS
 
-![](../assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png){ .img-center }
+![Logo de SAGA GIS](../assets/delimitation-bv-qgis-strahler/saga-gis-logo-678x306.png){ .img-center }
 
 La délimitation d'un bassin versant est l'une des opérations de base en hydrologie spatiale. SAGA GIS, intégré dans QGIS via le plugin **SAGA NextGen Provider**, offre des outils puissants pour réaliser cette analyse à partir d'un Modèle Numérique de Terrain (MNT). Cet article détaille le workflow complet appliqué à la commune de Mont-Rolland, dans la région de Thiès.
 
@@ -59,7 +59,7 @@ La version **LTR (Long Term Release)** de QGIS est la version stable recommandé
 1. Se rendre sur [**qgis.org/download**](https://qgis.org/download/)
 2. Télécharger une version **QGIS LTR** - J'utilise ici la version 3.34.6-Prizen
 
-![](../assets/delimitation-bv-qgis-strahler/version_qgis_.png){ .img-center }
+![Version LTR de QGIS utilisée pour ce tutoriel](../assets/delimitation-bv-qgis-strahler/version_qgis_.png){ .img-center }
 3. Lancer l'installateur et suivre les étapes par défaut.
 
 ### Activer le plugin SAGA NextGen Provider
@@ -68,14 +68,14 @@ La version **LTR (Long Term Release)** de QGIS est la version stable recommandé
 2. Chercher **"Processing Saga NextGen Provider"**
 3. Installer et activer le plugin
 
-![](../assets/delimitation-bv-qgis-strahler/Process_Saga_gis.png){ .img-center }
+![Installation du plugin Processing Saga NextGen Provider dans QGIS](../assets/delimitation-bv-qgis-strahler/Process_Saga_gis.png){ .img-center }
 4. Redémarrer QGIS
 
 Une fois activé, les outils SAGA sont accessibles depuis **Traitement → Boîte à outils → SAGA NextGen**.
 
 !!! warning "SAGA non détecté ?"
     Si les outils SAGA n'apparaissent pas après activation du plugin, Télécharger SAGA GIS séparément depuis **saga-gis.org** et configurer le chemin dans **Préférences → Options → Traitement → Fournisseurs de traitements → SAGA**. C'est le dossier de **Saga** qu'il faut renseigner.
-    ![](../assets/delimitation-bv-qgis-strahler/saga_qgis_folder_config.png){ .img-center }
+    ![Configuration du dossier SAGA dans les options de traitement de QGIS](../assets/delimitation-bv-qgis-strahler/saga_qgis_folder_config.png){ .img-center }
 
 ## Données utilisées
 
@@ -107,9 +107,9 @@ Avant d'analyser les écoulements, il faut corriger le MNT brut. Les sinks sont 
 !!! info "Pourquoi Fill Sinks Wang & Liu ?"
     L'algorithme Fill Sinks Wang & Liu (2006) est l'un des plus robustes pour le comblement des dépressions. Il est particulièrement adapté aux MNT radar comme ceux de l'ASF, qui contiennent fréquemment des artefacts de surface.
 
-![](../assets/delimitation-bv-qgis-strahler/fill_sinks_wang_and_liu.png){ .img-center }
+![MNT après correction des dépressions avec Fill Sinks Wang and Liu](../assets/delimitation-bv-qgis-strahler/fill_sinks_wang_and_liu.png){ .img-center }
 *MNT après correction des dépressions,le MNT corrigé est la donnée d'entrée pour la phase suivante.* On constate une certaine différence entre le modèle numérique de base et celui corrigé. 
-![](../assets/delimitation-bv-qgis-strahler/Filled_sink.png){ .img-center }
+![Comparaison entre le MNT d'origine et le MNT corrigé](../assets/delimitation-bv-qgis-strahler/Filled_sink.png){ .img-center }
 
 
 ### Phase 2 - Extraction du réseau et des bassins versants
@@ -126,7 +126,7 @@ Avant d'analyser les écoulements, il faut corriger le MNT brut. Les sinks sont 
 | **Threshold** | 5 | Seuil d'accumulation adapté à une petite commune |
 | **Subbasins** | décoché | Génère les sous-bassins en plus des bassins principaux |
 
-![](../assets/delimitation-bv-qgis-strahler/channel_network_drainage_basins.png){ .img-center }
+![Fenêtre de paramétrage de l'outil Channel network and drainage basins](../assets/delimitation-bv-qgis-strahler/channel_network_drainage_basins.png){ .img-center }
 *Fenêtre de paramétrage de l'outil Channel network and drainage basins.*
 
 !!! info "Choix du threshold à 5"
@@ -155,7 +155,7 @@ L'outil génère simultanément les couches suivantes :
 
 Après exécution, QGIS charge automatiquement les résultats qu'on a organisés ici en deux groupes :
 
-![](../assets/delimitation-bv-qgis-strahler/result_all_Saga_gis.png){ .img-center }
+![Couches de résultats SAGA dans le panneau des couches de QGIS](../assets/delimitation-bv-qgis-strahler/result_all_Saga_gis.png){ .img-center }
 *Résultats générés par Channel network and drainage basins dans le panneau des couches.*
 
 **Groupe 1 — Rasters**

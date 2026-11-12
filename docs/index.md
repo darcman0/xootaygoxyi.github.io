@@ -2,7 +2,7 @@
 hide:
   - toc
   - navigation
-title: "Xootay Gox Yi | Géomatique, Cartographie & Photogrammétrie"
+title: "Géomatique, cartographie et photogrammétrie au Sénégal"
 description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée à la géomatique : interventions drone, cartographie et analyse spatiale."
 ---
 
@@ -39,14 +39,6 @@ description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée
     Mémoires académiques, rapports de recherche et productions écrites.
 
     [Voir les publications :material-arrow-right:](publications.md){ .md-button }
-
--   :fontawesome-brands-youtube:{ .lg .middle } **Dr SIG sur YouTube**
-
-    ---
-
-    Des tutoriels vidéo en géomatique, pour suivre les manipulations pas à pas.
-
-    [Voir la chaîne :material-arrow-right:](https://www.youtube.com/@drsig8){ .md-button }
 
 
 </div>

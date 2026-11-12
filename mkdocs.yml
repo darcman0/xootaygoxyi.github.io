@@ -41,6 +41,11 @@ theme:
     - content.code.copy
     
 
+# Pages de Réalisations non publiées tant que la page n'est pas prête
+exclude_docs: |
+  realisations/apps/
+  realisations/projects/
+
 extra_css:
   - assets/css/extra.css
 

@@ -20,7 +20,7 @@ description: "Tutoriel PyQGIS pour exporter en PDF les mises en page QGIS sélec
 
 # Exporter des mises en page QGIS en PDF avec PyQGIS
 
-![](../assets/pyqgis_pdf_export/pyqgis.png){ .img-center }
+![Logo PyQGIS](../assets/pyqgis_pdf_export/pyqgis.png){ .img-center }
 
 
 Sur un projet de cartographie pédologique portant sur 78 parcelles réparties dans trois régions du Sénégal (Fatick, Kaolack, Saint-Louis) et 11 paramètres de fertilité des sols (azote, phosphore, potassium, calcium, magnésium, sodium, soufre, matière organique, CEC, pH, CE), le projet QGIS contenait les mises en page des trois régions mélangées. Je n'avais besoin d'exporter que celles de Fatick, ce qui rendait le Gestionnaire de mises en page peu pratique. Quand le projet contient des dizaines de mises en page et qu'on ne veut en exporter qu'une poignée en une seule fois, avec des réglages de précision stricts, il faut passer par PyQGIS.
@@ -45,10 +45,10 @@ Le projet contenait les mises en page des trois régions dans le même fichier Q
 - `FT_ok_new_Azote`
 
 Les mises en page :
-![](../assets/pyqgis_pdf_export/mise_en_page_cible.jpg){ .img-center }
+![Mises en page QGIS ciblées par l'export PDF](../assets/pyqgis_pdf_export/mise_en_page_cible.jpg){ .img-center }
 
 l'architecture d'une de ces mises en page:
-![](../assets/pyqgis_pdf_export/architecture_layout.jpg){ .img-center }
+![Structure d'une mise en page QGIS dans le gestionnaire de mises en page](../assets/pyqgis_pdf_export/architecture_layout.jpg){ .img-center }
 
 
 

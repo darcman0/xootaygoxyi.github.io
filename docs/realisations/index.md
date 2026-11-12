@@ -2,8 +2,8 @@
 hide:
   - toc
   - navigation
-title: "Xootay Gox Yi | Réalisations — Abdou Aziz Darc"
-description: "Découvrez mes projets SIG et applications géospatiaux : cartographie drone, photogrammétrie, télédétection et scripts d'automatisation."
+title: "Réalisations"
+description: "Découvrez mes projets SIG et applications géospatiales : cartographie drone, photogrammétrie, télédétection et scripts d'automatisation."
 ---
 
 # Réalisations

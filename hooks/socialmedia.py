@@ -29,6 +29,7 @@ def on_page_markdown(markdown, **kwargs):
     [Sur :simple-x:]({x_intent}?text={page_title}&url={page_url}){{ .md-button }}
     [Sur :simple-facebook:]({fb_sharer}?u={page_url}){{ .md-button }}
     [Sur :fontawesome-brands-linkedin:]({linkedin_sharer}?url={page_url}){{ .md-button }}
+    [Sur :fontawesome-brands-whatsapp:](https://wa.me/?text={page_title}{urllib.parse.quote(page_url, safe='')}){{ .md-button }}
     
     </div>
     </div>

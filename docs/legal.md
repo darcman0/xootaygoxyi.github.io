@@ -1,5 +1,5 @@
 ---
-title: "Mentions légales | Xootay Gox Yi - Abdou Aziz Darc"
+title: "Mentions légales"
 description: "Informations légales, hébergement et politique de confidentialité du site Xootay Gox Yi. Données collectées par Giscus, GoatCounter, Formspree et Brevo."
 hide:
   - navigation
@@ -43,7 +43,7 @@ Les messages envoyés par le formulaire transitent par [Formspree](https://forms
 
 ## Droits des personnes
 
-Conformément au **Règlement général sur la protection des données (RGPD)**, toute personne concernée peut exercer ses droits d’accès, de rectification ou d’effacement de ses données en adressant une demande à [darcman8@gmail.com](mailto:darcman8@gmail.com).
+Conformément au **Règlement général sur la protection des données (RGPD)**, toute personne concernée peut exercer ses droits d’accès, de rectification ou d’effacement de ses données en adressant une demande à [contact@xootaygoxyi.com](mailto:contact@xootaygoxyi.com).
 
 ---
 

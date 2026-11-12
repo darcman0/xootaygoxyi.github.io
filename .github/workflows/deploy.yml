@@ -43,6 +43,7 @@ jobs:
 
       # ÉTAPE 1 : Récupération des statistiques GoatCounter avec gestion de retentatives
       - name: Récupérer les statistiques GoatCounter
+        continue-on-error: true
         env:
           GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE: ${{ secrets.GOATCOUNTER_API_TOKEN_POPULAR_ARTICLE }}
         run: |

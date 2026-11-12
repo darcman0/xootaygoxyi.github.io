@@ -2,7 +2,7 @@
 hide:
   - toc
   - navigation
-title: "Xootay Gox Yi | Contact & Collaborations - Abdou Aziz Darc"
+title: "Contact et collaborations"
 description: "Une mission, un levé drone ou un projet SIG au Sénégal ou ailleurs ? Retrouvez mes canaux de contact professionnels, GitHub, LinkedIn et YouTube."
 ---
 
@@ -14,7 +14,7 @@ Une mission, une collaboration, une question sur ce que vous avez trouvé ici. J
 
 <div class="contact-container" markdown="1">
 
-[Me laisser un mail :material-email:](mailto:darcman8@gmail.com){ .md-button .md-button }
+[Me laisser un mail :material-email:](mailto:contact@xootaygoxyi.com){ .md-button .md-button }
 
 [Visiter mon Github :fontawesome-brands-github:](https://github.com/darcman0){ .md-button .md-button }
 
