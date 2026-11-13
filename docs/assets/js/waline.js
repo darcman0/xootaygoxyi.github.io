@@ -24,6 +24,7 @@ function initialiserWaline() {
     imageUploader: false,
     search: false,
     reaction: false,
+    noRss:true,
     locale: {
       placeholder: "Votre commentaire sera publié après validation."
     }
