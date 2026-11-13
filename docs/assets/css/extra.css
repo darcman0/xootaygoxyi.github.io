@@ -483,3 +483,27 @@
   display: table;
   margin: 1rem auto 0;
 }
+/* Waline : reprend les couleurs du thème Material (clair et sombre) */
+#waline {
+  --waline-font-size: 0.8rem;
+  --waline-theme-color: var(--md-primary-fg-color);
+  --waline-active-color: var(--md-accent-fg-color);
+  --waline-color: var(--md-default-fg-color);
+  --waline-bg-color: var(--md-default-bg-color);
+  --waline-bg-color-light: var(--md-code-bg-color);
+  --waline-bg-color-hover: var(--md-code-bg-color);
+  --waline-border-color: var(--md-default-fg-color--lightest);
+  --waline-light-grey: var(--md-default-fg-color--light);
+  --waline-dark-grey: var(--md-default-fg-color--light);
+  --waline-info-color: var(--md-default-fg-color--light);
+  --waline-info-bg-color: var(--md-code-bg-color);
+  --waline-disable-bg-color: var(--md-code-bg-color);
+  --waline-disable-color: var(--md-default-fg-color--light);
+  --waline-badge-color: var(--md-accent-fg-color);
+  --waline-white: var(--md-primary-bg-color);
+}
+
+#waline .wl-editor,
+#waline textarea {
+  font-family: inherit;
+}
