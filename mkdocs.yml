@@ -48,10 +48,13 @@ exclude_docs: |
 
 extra_css:
   - assets/css/extra.css
+  - https://unpkg.com/@waline/client@3.16.2/dist/waline.css
 
 extra_javascript:
   - assets/js/custom.js
   - assets/js/newsletter.js
+  - path: assets/js/waline.js
+    type: module
 
 markdown_extensions:
   - md_in_html

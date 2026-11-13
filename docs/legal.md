@@ -1,6 +1,6 @@
 ---
 title: "Mentions légales"
-description: "Informations légales, hébergement et politique de confidentialité du site Xootay Gox Yi. Données collectées par Giscus, GoatCounter, Formspree et Brevo."
+description: "Informations légales, hébergement et politique de confidentialité du site Xootay Gox Yi. Données collectées par Waline, GoatCounter, Formspree et Brevo."
 hide:
   - navigation
   - toc
@@ -28,8 +28,12 @@ L’inscription à la newsletter est gérée par [Brevo](https://www.brevo.com).
 
 ### Commentaires
 
-La fonctionnalité de commentaires repose sur [Giscus](https://giscus.app), qui s’appuie sur les Discussions GitHub. Aucun cookie de traçage ou publicitaire n’est déposé par ce biais.  
-[Politique de confidentialité de Giscus](https://github.com/giscus/giscus/blob/main/PRIVACY-POLICY.md)
+Les commentaires reposent sur [Waline](https://waline.js.org), un logiciel libre installé pour ce site. Le serveur est hébergé par [Vercel](https://vercel.com) (Vercel Inc., États-Unis) et les commentaires sont enregistrés dans une base de données [Neon](https://neon.com) (Neon Inc., États-Unis).
+
+Pour commenter, seul un pseudonyme est obligatoire. L’adresse email et le site web sont facultatifs : l’adresse email n’est jamais affichée publiquement. Le contenu du commentaire, la date et l’adresse IP (utilisée pour limiter le spam) sont également enregistrés. La région et le navigateur du visiteur ne sont pas conservés. Chaque commentaire est publié après validation manuelle. Aucun cookie de traçage ou publicitaire n’est déposé.
+
+Les commentaires sont conservés tant que l’article est en ligne. Pour faire supprimer un commentaire ou les données associées, il suffit d’écrire à [contact@xootaygoxyi.com](mailto:contact@xootaygoxyi.com).  
+[Politique de confidentialité de Vercel](https://vercel.com/legal/privacy-policy) · [Politique de confidentialité de Neon](https://neon.com/privacy-policy)
 
 ### Mesure d’audience
 
@@ -47,4 +51,4 @@ Conformément au **Règlement général sur la protection des données (RGPD)**,
 
 ---
 
-Dernière mise à jour : octobre 2026
+Dernière mise à jour : novembre 2026
